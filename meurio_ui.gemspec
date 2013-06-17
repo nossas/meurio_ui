@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = MeurioUi::VERSION
   spec.authors       = ["Nícolas Iensen"]
   spec.email         = ["nicolas@iensen.me"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{Default UI elements for Meu Rio projects}
+  spec.summary       = %q{Default UI elements for Meu Rio projects}
+  spec.homepage      = "https://github.com/meurio/meurio_ui"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

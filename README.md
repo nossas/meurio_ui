@@ -1,4 +1,4 @@
-# MeurioUi
+# Meu Rio UI
 
 TODO: Write a gem description
 
