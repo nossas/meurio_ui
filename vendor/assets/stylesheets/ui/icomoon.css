@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('fonts/icomoon.eot');
-	src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
-		url('fonts/icomoon.woff') format('woff'),
-		url('fonts/icomoon.ttf') format('truetype'),
-		url('fonts/icomoon.svg#icomoon') format('svg');
+	src:url('/assets/ui/fonts/icomoon.eot');
+	src:url('/assets/ui/fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('/assets/ui/fonts/icomoon.woff') format('woff'),
+		url('/assets/ui/fonts/icomoon.ttf') format('truetype'),
+		url('/assets/ui/fonts/icomoon.svg#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -27,7 +27,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-pause, .icon-new, .icon-mic, .icon-mail, .icon-loop, .icon-lock, .icon-location, .icon-list, .icon-link, .icon-info, .icon-image, .icon-home, .icon-heart, .icon-gear, .icon-folder, .icon-eye, .icon-export, .icon-document, .icon-cross-circle, .icon-cross, .icon-credit-card, .icon-cmd, .icon-clip, .icon-check-circle, .icon-check, .icon-chat, .icon-calendar-solid, .icon-calendar, .icon-bubble, .icon-bookmark, .icon-arror-right, .icon-arror-left, .icon-alert, .icon-gota, .icon-window, .icon-volume, .icon-video, .icon-user, .icon-upload, .icon-unknow, .icon-trash, .icon-time, .icon-tag, .icon-star, .icon-search, .icon-question, .icon-power, .icon-plus-circle, .icon-plus, .icon-play, .icon-photo, .icon-exit, .icon-windows {
+.icon-pause:before, .icon-new:before, .icon-mic:before, .icon-mail:before, .icon-loop:before, .icon-lock:before, .icon-location:before, .icon-list:before, .icon-link:before, .icon-info:before, .icon-image:before, .icon-home:before, .icon-heart:before, .icon-gear:before, .icon-folder:before, .icon-eye:before, .icon-export:before, .icon-document:before, .icon-cross-circle:before, .icon-cross:before, .icon-credit-card:before, .icon-cmd:before, .icon-clip:before, .icon-check-circle:before, .icon-check:before, .icon-chat:before, .icon-calendar-solid:before, .icon-calendar:before, .icon-bubble:before, .icon-bookmark:before, .icon-arror-right:before, .icon-arror-left:before, .icon-alert:before, .icon-gota:before, .icon-window:before, .icon-volume:before, .icon-video:before, .icon-user:before, .icon-upload:before, .icon-unknow:before, .icon-trash:before, .icon-time:before, .icon-tag:before, .icon-star:before, .icon-search:before, .icon-question:before, .icon-power:before, .icon-plus-circle:before, .icon-plus:before, .icon-play:before, .icon-photo:before, .icon-exit:before, .icon-windows:before {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
