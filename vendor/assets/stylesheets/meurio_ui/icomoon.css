@@ -27,7 +27,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-youtube:before, .icon-windows-24:before, .icon-windows-16:before, .icon-window-24:before, .icon-window-16:before, .icon-volume-24:before, .icon-volume-16:before, .icon-vimeo:before, .icon-video-24:before, .icon-video-16:before, .icon-user-24:before, .icon-user-16:before, .icon-upload-24:before, .icon-upload-16:before, .icon-unknow-24:before, .icon-unknow-16:before, .icon-twitter:before, .icon-triangle-up:before, .icon-triangle-up-small:before, .icon-triangle-right-large:before, .icon-triangle-left-large:before, .icon-triangle-down:before, .icon-triangle-down-small:before, .icon-trash-24:before, .icon-trash-16:before, .icon-time-24:before, .icon-time-16:before, .icon-target:before, .icon-tag-24:before, .icon-tag-16:before, .icon-stumbleupon:before, .icon-star-24:before, .icon-star-15:before, .icon-spotify:before, .icon-skype:before, .icon-search-24:before, .icon-search-16:before, .icon-radio-unchecked:before, .icon-radio-overlayer:before, .icon-radio-checked:before, .icon-question-24:before, .icon-question-16:before, .icon-profile:before, .icon-power-24:before, .icon-power-16:before, .icon-plus-circle-24:before, .icon-plus-circle-16:before, .icon-plus-24:before, .icon-plus-16:before, .icon-play-24:before, .icon-play-16:before, .icon-pinterest:before, .icon-photo-24:before, .icon-photo-16:before, .icon-pause-24:before, .icon-pause-16:before, .icon-path:before, .icon-new-24:before, .icon-new-16:before, .icon-myspace:before, .icon-mic-24:before, .icon-mic-16:before, .icon-message:before, .icon-megaphone:before, .icon-mail-24:before, .icon-mail-16:before, .icon-loop-24:before, .icon-loop-16:before, .icon-lock-24:before, .icon-lock-16:before, .icon-location-24:before, .icon-location-16:before, .icon-list-thumbnailed:before, .icon-list-small-thumbnails:before, .icon-list-numbered:before, .icon-list-large-thumbnails:before, .icon-list-columned:before, .icon-list-bulleted:before, .icon-list-24:before, .icon-list-16:before, .icon-linkedin:before, .icon-link-24:before, .icon-link-16:before, .icon-info-24:before, .icon-info-16:before, .icon-image-24:before, .icon-image-16:before, .icon-home-24:before, .icon-home-16:before, .icon-heart-24:before, .icon-heart-16:before, .icon-googleplus:before, .icon-gear-24:before, .icon-gear-16:before, .icon-folder-24:before, .icon-folder-16:before, .icon-fire:before, .icon-facebook:before, .icon-eye-24:before, .icon-eye-16:before, .icon-export-24:before, .icon-export-16:before, .icon-exit-24:before, .icon-exit-16:before, .icon-dribbble:before, .icon-document-24:before, .icon-document-16:before, .icon-cross-circle-24:before, .icon-cross-circle-16:before, .icon-cross-24:before, .icon-cross-16:before, .icon-credit-card-24:before, .icon-credit-card-16:before, .icon-cook:before, .icon-cmd-24:before, .icon-cmd-16:before, .icon-close-box:before, .icon-clip-24:before, .icon-clip-16:before, .icon-checkbox-unchecked:before, .icon-checkbox-overlayer:before, .icon-checkbox-checked:before, .icon-check-round-16:before, .icon-check-circle-24:before, .icon-check-24:before, .icon-check-16:before, .icon-chat-24:before, .icon-chat-16:before, .icon-calendar-solid-24:before, .icon-calendar-solid-16:before, .icon-calendar-24:before, .icon-calendar-16:before, .icon-bubble-24:before, .icon-bubble-16:before, .icon-bookmark-24:before, .icon-bookmark-16:before, .icon-blogger:before, .icon-behance:before, .icon-badge:before, .icon-arrow-right-24:before, .icon-arrow-right-16:before, .icon-arrow-left-16:before, .icon-arror-left-24:before, .icon-alert-24:before, .icon-alert-16 {
+.icon-retweet:before, .icon-clock:before, .icon-youtube:before, .icon-windows-24:before, .icon-windows-16:before, .icon-window-24:before, .icon-window-16:before, .icon-volume-24:before, .icon-volume-16:before, .icon-vimeo:before, .icon-video-24:before, .icon-video-16:before, .icon-user-24:before, .icon-user-16:before, .icon-upload-24:before, .icon-upload-16:before, .icon-unknow-24:before, .icon-unknow-16:before, .icon-twitter:before, .icon-triangle-up:before, .icon-triangle-up-small:before, .icon-triangle-right-large:before, .icon-triangle-left-large:before, .icon-triangle-down:before, .icon-triangle-down-small:before, .icon-trash-24:before, .icon-trash-16:before, .icon-time-24:before, .icon-time-16:before, .icon-target:before, .icon-tag-24:before, .icon-tag-16:before, .icon-stumbleupon:before, .icon-star-24:before, .icon-star-15:before, .icon-spotify:before, .icon-skype:before, .icon-search-24:before, .icon-search-16:before, .icon-radio-unchecked:before, .icon-radio-overlayer:before, .icon-radio-checked:before, .icon-question-24:before, .icon-question-16:before, .icon-profile:before, .icon-power-24:before, .icon-power-16:before, .icon-plus-circle-24:before, .icon-plus-circle-16:before, .icon-plus-24:before, .icon-plus-16:before, .icon-play-24:before, .icon-play-16:before, .icon-pinterest:before, .icon-photo-24:before, .icon-photo-16:before, .icon-pause-24:before, .icon-pause-16:before, .icon-path:before, .icon-new-24:before, .icon-new-16:before, .icon-myspace:before, .icon-mic-24:before, .icon-mic-16:before, .icon-message:before, .icon-megaphone:before, .icon-mail-24:before, .icon-mail-16:before, .icon-loop-24:before, .icon-loop-16:before, .icon-lock-24:before, .icon-lock-16:before, .icon-location-24:before, .icon-location-16:before, .icon-list-thumbnailed:before, .icon-list-small-thumbnails:before, .icon-list-numbered:before, .icon-list-large-thumbnails:before, .icon-list-columned:before, .icon-list-bulleted:before, .icon-list-24:before, .icon-list-16:before, .icon-linkedin:before, .icon-link-24:before, .icon-link-16:before, .icon-info-24:before, .icon-info-16:before, .icon-image-24:before, .icon-image-16:before, .icon-home-24:before, .icon-home-16:before, .icon-heart-24:before, .icon-heart-16:before, .icon-googleplus:before, .icon-gear-24:before, .icon-gear-16:before, .icon-folder-24:before, .icon-folder-16:before, .icon-fire:before, .icon-facebook:before, .icon-eye-24:before, .icon-eye-16:before, .icon-export-24:before, .icon-export-16:before, .icon-exit-24:before, .icon-exit-16:before, .icon-dribbble:before, .icon-document-24:before, .icon-document-16:before, .icon-cross-circle-24:before, .icon-cross-circle-16:before, .icon-cross-24:before, .icon-cross-16:before, .icon-credit-card-24:before, .icon-credit-card-16:before, .icon-cook:before, .icon-cmd-24:before, .icon-cmd-16:before, .icon-close-box:before, .icon-clip-24:before, .icon-clip-16:before, .icon-checkbox-unchecked:before, .icon-checkbox-overlayer:before, .icon-checkbox-checked:before, .icon-check-round-16:before, .icon-check-circle-24:before, .icon-check-24:before, .icon-check-16:before, .icon-chat-24:before, .icon-chat-16:before, .icon-calendar-solid-24:before, .icon-calendar-solid-16:before, .icon-calendar-24:before, .icon-calendar-16:before, .icon-bubble-24:before, .icon-bubble-16:before, .icon-bookmark-24:before, .icon-bookmark-16:before, .icon-blogger:before, .icon-behance:before, .icon-badge:before, .icon-arrow-right-24:before, .icon-arrow-right-16:before, .icon-arrow-left-16:before, .icon-arror-left-24:before, .icon-alert-24:before, .icon-alert-16:before {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -37,439 +37,445 @@ you can use the generic selector below, but it's slower:
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
 }
-.icon-youtube:before {
+.icon-retweet:before {
 	content: "\e000";
 }
-.icon-windows-24:before {
+.icon-clock:before {
 	content: "\e001";
 }
-.icon-windows-16:before {
+.icon-youtube:before {
 	content: "\e002";
 }
-.icon-window-24:before {
+.icon-windows-24:before {
 	content: "\e003";
 }
-.icon-window-16:before {
+.icon-windows-16:before {
 	content: "\e004";
 }
-.icon-volume-24:before {
+.icon-window-24:before {
 	content: "\e005";
 }
-.icon-volume-16:before {
+.icon-window-16:before {
 	content: "\e006";
 }
-.icon-vimeo:before {
+.icon-volume-24:before {
 	content: "\e007";
 }
-.icon-video-24:before {
+.icon-volume-16:before {
 	content: "\e008";
 }
-.icon-video-16:before {
+.icon-vimeo:before {
 	content: "\e009";
 }
-.icon-user-24:before {
+.icon-video-24:before {
 	content: "\e00a";
 }
-.icon-user-16:before {
+.icon-video-16:before {
 	content: "\e00b";
 }
-.icon-upload-24:before {
+.icon-user-24:before {
 	content: "\e00c";
 }
-.icon-upload-16:before {
+.icon-user-16:before {
 	content: "\e00d";
 }
-.icon-unknow-24:before {
+.icon-upload-24:before {
 	content: "\e00e";
 }
-.icon-unknow-16:before {
+.icon-upload-16:before {
 	content: "\e00f";
 }
-.icon-twitter:before {
+.icon-unknow-24:before {
 	content: "\e010";
 }
-.icon-triangle-up:before {
+.icon-unknow-16:before {
 	content: "\e011";
 }
-.icon-triangle-up-small:before {
+.icon-twitter:before {
 	content: "\e012";
 }
-.icon-triangle-right-large:before {
+.icon-triangle-up:before {
 	content: "\e013";
 }
-.icon-triangle-left-large:before {
+.icon-triangle-up-small:before {
 	content: "\e014";
 }
-.icon-triangle-down:before {
+.icon-triangle-right-large:before {
 	content: "\e015";
 }
-.icon-triangle-down-small:before {
+.icon-triangle-left-large:before {
 	content: "\e016";
 }
-.icon-trash-24:before {
+.icon-triangle-down:before {
 	content: "\e017";
 }
-.icon-trash-16:before {
+.icon-triangle-down-small:before {
 	content: "\e018";
 }
-.icon-time-24:before {
+.icon-trash-24:before {
 	content: "\e019";
 }
-.icon-time-16:before {
+.icon-trash-16:before {
 	content: "\e01a";
 }
-.icon-target:before {
+.icon-time-24:before {
 	content: "\e01b";
 }
-.icon-tag-24:before {
+.icon-time-16:before {
 	content: "\e01c";
 }
-.icon-tag-16:before {
+.icon-target:before {
 	content: "\e01d";
 }
-.icon-stumbleupon:before {
+.icon-tag-24:before {
 	content: "\e01e";
 }
-.icon-star-24:before {
+.icon-tag-16:before {
 	content: "\e01f";
 }
-.icon-star-15:before {
+.icon-stumbleupon:before {
 	content: "\e020";
 }
-.icon-spotify:before {
+.icon-star-24:before {
 	content: "\e021";
 }
-.icon-skype:before {
+.icon-star-15:before {
 	content: "\e022";
 }
-.icon-search-24:before {
+.icon-spotify:before {
 	content: "\e023";
 }
-.icon-search-16:before {
+.icon-skype:before {
 	content: "\e024";
 }
-.icon-radio-unchecked:before {
+.icon-search-24:before {
 	content: "\e025";
 }
-.icon-radio-overlayer:before {
+.icon-search-16:before {
 	content: "\e026";
 }
-.icon-radio-checked:before {
+.icon-radio-unchecked:before {
 	content: "\e027";
 }
-.icon-question-24:before {
+.icon-radio-overlayer:before {
 	content: "\e028";
 }
-.icon-question-16:before {
+.icon-radio-checked:before {
 	content: "\e029";
 }
-.icon-profile:before {
+.icon-question-24:before {
 	content: "\e02a";
 }
-.icon-power-24:before {
+.icon-question-16:before {
 	content: "\e02b";
 }
-.icon-power-16:before {
+.icon-profile:before {
 	content: "\e02c";
 }
-.icon-plus-circle-24:before {
+.icon-power-24:before {
 	content: "\e02d";
 }
-.icon-plus-circle-16:before {
+.icon-power-16:before {
 	content: "\e02e";
 }
-.icon-plus-24:before {
+.icon-plus-circle-24:before {
 	content: "\e02f";
 }
-.icon-plus-16:before {
+.icon-plus-circle-16:before {
 	content: "\e030";
 }
-.icon-play-24:before {
+.icon-plus-24:before {
 	content: "\e031";
 }
-.icon-play-16:before {
+.icon-plus-16:before {
 	content: "\e032";
 }
-.icon-pinterest:before {
+.icon-play-24:before {
 	content: "\e033";
 }
-.icon-photo-24:before {
+.icon-play-16:before {
 	content: "\e034";
 }
-.icon-photo-16:before {
+.icon-pinterest:before {
 	content: "\e035";
 }
-.icon-pause-24:before {
+.icon-photo-24:before {
 	content: "\e036";
 }
-.icon-pause-16:before {
+.icon-photo-16:before {
 	content: "\e037";
 }
-.icon-path:before {
+.icon-pause-24:before {
 	content: "\e038";
 }
-.icon-new-24:before {
+.icon-pause-16:before {
 	content: "\e039";
 }
-.icon-new-16:before {
+.icon-path:before {
 	content: "\e03a";
 }
-.icon-myspace:before {
+.icon-new-24:before {
 	content: "\e03b";
 }
-.icon-mic-24:before {
+.icon-new-16:before {
 	content: "\e03c";
 }
-.icon-mic-16:before {
+.icon-myspace:before {
 	content: "\e03d";
 }
-.icon-message:before {
+.icon-mic-24:before {
 	content: "\e03e";
 }
-.icon-megaphone:before {
+.icon-mic-16:before {
 	content: "\e03f";
 }
-.icon-mail-24:before {
+.icon-message:before {
 	content: "\e040";
 }
-.icon-mail-16:before {
+.icon-megaphone:before {
 	content: "\e041";
 }
-.icon-loop-24:before {
+.icon-mail-24:before {
 	content: "\e042";
 }
-.icon-loop-16:before {
+.icon-mail-16:before {
 	content: "\e043";
 }
-.icon-lock-24:before {
+.icon-loop-24:before {
 	content: "\e044";
 }
-.icon-lock-16:before {
+.icon-loop-16:before {
 	content: "\e045";
 }
-.icon-location-24:before {
+.icon-lock-24:before {
 	content: "\e046";
 }
-.icon-location-16:before {
+.icon-lock-16:before {
 	content: "\e047";
 }
-.icon-list-thumbnailed:before {
+.icon-location-24:before {
 	content: "\e048";
 }
-.icon-list-small-thumbnails:before {
+.icon-location-16:before {
 	content: "\e049";
 }
-.icon-list-numbered:before {
+.icon-list-thumbnailed:before {
 	content: "\e04a";
 }
-.icon-list-large-thumbnails:before {
+.icon-list-small-thumbnails:before {
 	content: "\e04b";
 }
-.icon-list-columned:before {
+.icon-list-numbered:before {
 	content: "\e04c";
 }
-.icon-list-bulleted:before {
+.icon-list-large-thumbnails:before {
 	content: "\e04d";
 }
-.icon-list-24:before {
+.icon-list-columned:before {
 	content: "\e04e";
 }
-.icon-list-16:before {
+.icon-list-bulleted:before {
 	content: "\e04f";
 }
-.icon-linkedin:before {
+.icon-list-24:before {
 	content: "\e050";
 }
-.icon-link-24:before {
+.icon-list-16:before {
 	content: "\e051";
 }
-.icon-link-16:before {
+.icon-linkedin:before {
 	content: "\e052";
 }
-.icon-info-24:before {
+.icon-link-24:before {
 	content: "\e053";
 }
-.icon-info-16:before {
+.icon-link-16:before {
 	content: "\e054";
 }
-.icon-image-24:before {
+.icon-info-24:before {
 	content: "\e055";
 }
-.icon-image-16:before {
+.icon-info-16:before {
 	content: "\e056";
 }
-.icon-home-24:before {
+.icon-image-24:before {
 	content: "\e057";
 }
-.icon-home-16:before {
+.icon-image-16:before {
 	content: "\e058";
 }
-.icon-heart-24:before {
+.icon-home-24:before {
 	content: "\e059";
 }
-.icon-heart-16:before {
+.icon-home-16:before {
 	content: "\e05a";
 }
-.icon-googleplus:before {
+.icon-heart-24:before {
 	content: "\e05b";
 }
-.icon-gear-24:before {
+.icon-heart-16:before {
 	content: "\e05c";
 }
-.icon-gear-16:before {
+.icon-googleplus:before {
 	content: "\e05d";
 }
-.icon-folder-24:before {
+.icon-gear-24:before {
 	content: "\e05e";
 }
-.icon-folder-16:before {
+.icon-gear-16:before {
 	content: "\e05f";
 }
-.icon-fire:before {
+.icon-folder-24:before {
 	content: "\e060";
 }
-.icon-facebook:before {
+.icon-folder-16:before {
 	content: "\e061";
 }
-.icon-eye-24:before {
+.icon-fire:before {
 	content: "\e062";
 }
-.icon-eye-16:before {
+.icon-facebook:before {
 	content: "\e063";
 }
-.icon-export-24:before {
+.icon-eye-24:before {
 	content: "\e064";
 }
-.icon-export-16:before {
+.icon-eye-16:before {
 	content: "\e065";
 }
-.icon-exit-24:before {
+.icon-export-24:before {
 	content: "\e066";
 }
-.icon-exit-16:before {
+.icon-export-16:before {
 	content: "\e067";
 }
-.icon-dribbble:before {
+.icon-exit-24:before {
 	content: "\e068";
 }
-.icon-document-24:before {
+.icon-exit-16:before {
 	content: "\e069";
 }
-.icon-document-16:before {
+.icon-dribbble:before {
 	content: "\e06a";
 }
-.icon-cross-circle-24:before {
+.icon-document-24:before {
 	content: "\e06b";
 }
-.icon-cross-circle-16:before {
+.icon-document-16:before {
 	content: "\e06c";
 }
-.icon-cross-24:before {
+.icon-cross-circle-24:before {
 	content: "\e06d";
 }
-.icon-cross-16:before {
+.icon-cross-circle-16:before {
 	content: "\e06e";
 }
-.icon-credit-card-24:before {
+.icon-cross-24:before {
 	content: "\e06f";
 }
-.icon-credit-card-16:before {
+.icon-cross-16:before {
 	content: "\e070";
 }
-.icon-cook:before {
+.icon-credit-card-24:before {
 	content: "\e071";
 }
-.icon-cmd-24:before {
+.icon-credit-card-16:before {
 	content: "\e072";
 }
-.icon-cmd-16:before {
+.icon-cook:before {
 	content: "\e073";
 }
-.icon-close-box:before {
+.icon-cmd-24:before {
 	content: "\e074";
 }
-.icon-clip-24:before {
+.icon-cmd-16:before {
 	content: "\e075";
 }
-.icon-clip-16:before {
+.icon-close-box:before {
 	content: "\e076";
 }
-.icon-checkbox-unchecked:before {
+.icon-clip-24:before {
 	content: "\e077";
 }
-.icon-checkbox-overlayer:before {
+.icon-clip-16:before {
 	content: "\e078";
 }
-.icon-checkbox-checked:before {
+.icon-checkbox-unchecked:before {
 	content: "\e079";
 }
-.icon-check-round-16:before {
+.icon-checkbox-overlayer:before {
 	content: "\e07a";
 }
-.icon-check-circle-24:before {
+.icon-checkbox-checked:before {
 	content: "\e07b";
 }
-.icon-check-24:before {
+.icon-check-round-16:before {
 	content: "\e07c";
 }
-.icon-check-16:before {
+.icon-check-circle-24:before {
 	content: "\e07d";
 }
-.icon-chat-24:before {
+.icon-check-24:before {
 	content: "\e07e";
 }
-.icon-chat-16:before {
+.icon-check-16:before {
 	content: "\e07f";
 }
-.icon-calendar-solid-24:before {
+.icon-chat-24:before {
 	content: "\e080";
 }
-.icon-calendar-solid-16:before {
+.icon-chat-16:before {
 	content: "\e081";
 }
-.icon-calendar-24:before {
+.icon-calendar-solid-24:before {
 	content: "\e082";
 }
-.icon-calendar-16:before {
+.icon-calendar-solid-16:before {
 	content: "\e083";
 }
-.icon-bubble-24:before {
+.icon-calendar-24:before {
 	content: "\e084";
 }
-.icon-bubble-16:before {
+.icon-calendar-16:before {
 	content: "\e085";
 }
-.icon-bookmark-24:before {
+.icon-bubble-24:before {
 	content: "\e086";
 }
-.icon-bookmark-16:before {
+.icon-bubble-16:before {
 	content: "\e087";
 }
-.icon-blogger:before {
+.icon-bookmark-24:before {
 	content: "\e088";
 }
-.icon-behance:before {
+.icon-bookmark-16:before {
 	content: "\e089";
 }
-.icon-badge:before {
+.icon-blogger:before {
 	content: "\e08a";
 }
-.icon-arrow-right-24:before {
+.icon-behance:before {
 	content: "\e08b";
 }
-.icon-arrow-right-16:before {
+.icon-badge:before {
 	content: "\e08c";
 }
-.icon-arrow-left-16:before {
+.icon-arrow-right-24:before {
 	content: "\e08d";
 }
-.icon-arror-left-24:before {
+.icon-arrow-right-16:before {
 	content: "\e08e";
 }
-.icon-alert-24:before {
+.icon-arrow-left-16:before {
 	content: "\e08f";
 }
-.icon-alert-16:before {
+.icon-arror-left-24:before {
 	content: "\e090";
+}
+.icon-alert-24:before {
+	content: "\e091";
+}
+.icon-alert-16:before {
+	content: "\e092";
 }
 
