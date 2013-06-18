@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = MeurioUi::Rails::VERSION
   spec.authors       = ["Nícolas Iensen"]
   spec.email         = ["nicolas@iensen.me"]
-  spec.description   = %q{Default UI elements for Meu Rio projects}
+  spec.description   = %q{Meu Rio UI is a Rails engine that provides user interface components like buttons, fields, icons, fonts, and more patterns for Meu Rio organization}
   spec.summary       = %q{Default UI elements for Meu Rio projects}
   spec.homepage      = "https://github.com/meurio/meurio_ui"
   spec.license       = "MIT"
