@@ -1,10 +1,10 @@
 # Meu Rio UI
 
-TODO: Write a gem description
+Meu Rio UI is a Rails engine that provides user interface components like buttons, fields, icons, fonts, and more patterns for Meu Rio organization
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this line to your Rails project's Gemfile:
 
     gem 'meurio_ui'
 
@@ -12,13 +12,13 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
+Now you can include Meu Rio UI to your SASS/SCSS file:
 
-    $ gem install meurio_ui
+    @import meurio_ui
 
 ## Usage
 
-TODO: Write usage instructions here
+All the Meu Rio UI features can be found in the [Meu Rio UI Demo](http://meurio-ui.herokuapp.com/)
 
 ## Contributing
 
