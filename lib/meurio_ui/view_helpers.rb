@@ -43,28 +43,28 @@ module MeurioUi
           content_tag(:div, class: :meurio_apps) do
             content_tag(:div, class: :current_app) do
               link_to(root_path) do
-                image_tag('pdp.png') + content_tag(:span, 'Panela de Pressão')
+                image_tag("#{app}.png") + content_tag(:span, application_name(app))
               end +
               content_tag(:span, nil, class: 'icon-arrow-box')
             end +
             content_tag(:div, class: :other_apps) do
               link_to('http://meurio.org.br/', class: :meurio_app) do
-                image_tag('mr.png') + content_tag(:span, 'Ação em Rede')
+                image_tag("#{app}.png") + content_tag(:span, application_name(app))
               end +
               link_to('http://paneladepressao.meurio.org.br/', class: :meurio_app) do
-                image_tag('pdp.png') + content_tag(:span, 'Panela de Pressão')
+                image_tag("#{app}.png") + content_tag(:span, application_name(app))
               end +
               link_to('http://imagine.meurio.org.br/', class: :meurio_app) do
-                image_tag('imagine.png') + content_tag(:span, 'Imagine')
+                image_tag("#{app}.png") + content_tag(:span, application_name(app))
               end +
               link_to('https://apoie.meurio.org.br/', class: :meurio_app) do
-                image_tag('apoie.png') + content_tag(:span, 'Faça Acontecer')
+                image_tag("#{app}.png") + content_tag(:span, application_name(app))
               end +
               link_to('http://deolho.meurio.org.br/', class: :meurio_app) do
-                image_tag('deolho.png') + content_tag(:span, 'De Olho')
+                image_tag("#{app}.png") + content_tag(:span, application_name(app))
               end +
               link_to('http://deguarda.meurio.org.br/', class: :meurio_app) do
-                image_tag('deguarda.png') + content_tag(:span, 'De Guarda')
+                image_tag("#{app}.png") + content_tag(:span, application_name(app))
               end
             end
           end +
@@ -72,5 +72,14 @@ module MeurioUi
         end
       end
     end
+  end
+
+  def application_name app
+    return "Ação em Rede"       if app == :mr
+    return "Panela de Pressão"  if app == :pdp
+    return "Imagine"            if app == :imagine
+    return "Faça Acontecer"     if app == :apoie
+    return "De Olho"            if app == :deolho
+    return "De Guarda"          if app == :deguarda
   end
 end
