@@ -1,0 +1,105 @@
+header
+  .user
+    background: $green
+    line-height: 35px
+    .row
+      overflow: visible
+    .meurio_logo
+      padding: 7px 0
+    .user_menu
+      text-align: right
+      color: white
+      position: relative
+      padding: 7px 0
+      img
+        width: 35px
+        +border-radius(35px)
+        vertical-align: middle
+        margin-right: .5em
+      .icon-triangle-down
+        top: 6px
+        position: relative
+        margin-left: 1em
+        cursor: pointer
+        +user-select(none)
+      .user_links
+        position: absolute
+        top: 40px
+        background: $green
+        z-index: 1000
+        right: 0
+        display: none
+        a
+          display: block
+          padding: 0 1em
+          color: white
+
+  .app
+    line-height: 59px
+    .row
+      overflow: visible
+    .logo
+      cursor: pointer
+      position: relative
+      overflow: visible
+      padding: 10px 0
+      font-size: 20px
+      font-weight: bold
+      a
+        color: black
+      .current_app
+        img
+          vertical-align: middle
+          margin-right: .5em
+          float: left
+        span
+          display: block
+          float: left
+        span.icon-arrow-box
+          position: relative
+          top: 19px
+          margin-left: 1em
+          color: #a7a8ac
+          font-size: .9em
+      .apps
+        position: absolute
+        background: white
+        top: 79px
+        z-index: 1000
+        width: 600px
+        padding: 1em
+        display: none
+        .app_btn
+          font-size: .7em
+          font-weight: normal
+          display: block
+          color: black
+          float: left
+          width: 80px
+          margin: 0 10px
+          text-align: center
+          line-height: normal
+          span
+            display: block
+          img
+            display: inline-block
+    .menu
+      text-align: right
+      padding: 10px 0
+      a
+        display: inline-block
+        margin-left: 1.5em
+        font-size: 16px
+        font-weight: bold
+        color: black
+        &.btn
+          background: $orange
+          color: white
+          padding: .5em
+          display: inline-block
+          width: auto
+          line-height: normal
+          &:hover
+            text-decoration: none
+        &:hover
+          text-decoration: underline
