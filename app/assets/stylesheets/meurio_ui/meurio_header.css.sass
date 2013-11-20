@@ -1,9 +1,9 @@
-header
-  .user
+header.meurio_header
+  .row
+    overflow: visible
+  .meurio_logo_and_user_menu
     background: $green
     line-height: 35px
-    .row
-      overflow: visible
     .meurio_logo
       padding: 7px 0
     .user_menu
@@ -11,18 +11,19 @@ header
       color: white
       position: relative
       padding: 7px 0
-      img
-        width: 35px
-        +border-radius(35px)
-        vertical-align: middle
-        margin-right: .5em
-      .icon-triangle-down
-        top: 6px
-        position: relative
-        margin-left: 1em
-        cursor: pointer
-        +user-select(none)
-      .user_links
+      .current_user
+        img
+          width: 35px
+          +border-radius(35px)
+          vertical-align: middle
+          margin-right: .5em
+        .icon-triangle-down
+          top: 6px
+          position: relative
+          margin-left: 1em
+          cursor: pointer
+          +user-select(none)
+      .current_user_links
         position: absolute
         top: 40px
         background: $green
@@ -34,11 +35,9 @@ header
           padding: 0 1em
           color: white
 
-  .app
+  .meurio_apps_and_application_menu
     line-height: 59px
-    .row
-      overflow: visible
-    .logo
+    .meurio_apps
       cursor: pointer
       position: relative
       overflow: visible
@@ -61,7 +60,7 @@ header
           margin-left: 1em
           color: #a7a8ac
           font-size: .9em
-      .apps
+      .other_apps
         position: absolute
         background: white
         top: 79px
@@ -69,7 +68,7 @@ header
         width: 600px
         padding: 1em
         display: none
-        .app_btn
+        .meurio_app
           font-size: .7em
           font-weight: normal
           display: block
@@ -83,7 +82,8 @@ header
             display: block
           img
             display: inline-block
-    .menu
+
+    .application_menu
       text-align: right
       padding: 10px 0
       a
@@ -103,3 +103,16 @@ header
             text-decoration: none
         &:hover
           text-decoration: underline
+
+a.hollow_btn
+  color: white
+  border: 1px solid white
+  padding: 5px 10px
+  font-weight: bold
+  +border-radius(3px)
+  &:hover
+    color: $green
+    background: white
+
+.clear
+  clear: both
