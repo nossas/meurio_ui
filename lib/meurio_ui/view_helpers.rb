@@ -68,7 +68,7 @@ module MeurioUi
               end
             end
           end +
-          content_tag(:div, content_for?(:application_menu) ? yield(:application_menu) : nil, class: :application_menu) + content_tag(:div, nil, class: :clear)
+          content_tag(:div, yield(:application_menu), class: :application_menu) + content_tag(:div, nil, class: :clear)
         end
       end
     end
