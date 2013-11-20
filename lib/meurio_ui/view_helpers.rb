@@ -43,28 +43,28 @@ module MeurioUi
           content_tag(:div, class: :meurio_apps) do
             content_tag(:div, class: :current_app) do
               link_to(root_path) do
-                image_tag('pdp.png') + content_tag(:span, 'Panela de Pressão')
+                image_tag('meurio_ui/pdp.png') + content_tag(:span, 'Panela de Pressão')
               end +
               content_tag(:span, nil, class: 'icon-arrow-box')
             end +
             content_tag(:div, class: :other_apps) do
               link_to('http://meurio.org.br/', class: :meurio_app) do
-                image_tag('mr.png') + content_tag(:span, 'Ação em Rede')
+                image_tag('meurio_ui/mr.png') + content_tag(:span, 'Ação em Rede')
               end +
               link_to('http://paneladepressao.meurio.org.br/', class: :meurio_app) do
-                image_tag('pdp.png') + content_tag(:span, 'Panela de Pressão')
+                image_tag('meurio_ui/pdp.png') + content_tag(:span, 'Panela de Pressão')
               end +
               link_to('http://imagine.meurio.org.br/', class: :meurio_app) do
-                image_tag('imagine.png') + content_tag(:span, 'Imagine')
+                image_tag('meurio_ui/imagine.png') + content_tag(:span, 'Imagine')
               end +
               link_to('https://apoie.meurio.org.br/', class: :meurio_app) do
-                image_tag('apoie.png') + content_tag(:span, 'Faça Acontecer')
+                image_tag('meurio_ui/apoie.png') + content_tag(:span, 'Faça Acontecer')
               end +
               link_to('http://deolho.meurio.org.br/', class: :meurio_app) do
-                image_tag('deolho.png') + content_tag(:span, 'De Olho')
+                image_tag('meurio_ui/deolho.png') + content_tag(:span, 'De Olho')
               end +
               link_to('http://deguarda.meurio.org.br/', class: :meurio_app) do
-                image_tag('deguarda.png') + content_tag(:span, 'De Guarda')
+                image_tag('meurio_ui/deguarda.png') + content_tag(:span, 'De Guarda')
               end
             end
           end +
