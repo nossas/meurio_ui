@@ -68,10 +68,7 @@ module MeurioUi
               end
             end
           end +
-          content_tag(:div, class: :application_menu) do
-            link_to('Como funciona?', about_path) + link_to('Descubra as campanhas', explore_path) + link_to('Crie sua campanha', new_campaign_path, class: :btn)
-          end +
-          content_tag(:div, nil, class: :clear)
+          content_tag(:div, yield(:application_menu), class: :application_menu) + content_tag(:div, nil, class: :clear)
         end
       end
     end
