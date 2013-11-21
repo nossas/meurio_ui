@@ -4,7 +4,7 @@ module MeurioUi
   module ViewHelpers
     def meurio_header_for app
       content_tag(:header, class: :meurio_header) do
-        meurio_brand_and_user_panel + application_menu
+        meurio_brand_and_user_panel + application_menu(app)
       end
     end
 
@@ -37,7 +37,7 @@ module MeurioUi
       end
     end
 
-    def application_menu
+    def application_menu app
       content_tag(:div, class: :meurio_apps_and_application_menu) do
         content_tag(:div, class: :row) do
           content_tag(:div, class: :meurio_apps) do
@@ -68,18 +68,18 @@ module MeurioUi
               end
             end
           end +
-          content_tag(:div, yield(:application_menu), class: :application_menu) + content_tag(:div, nil, class: :clear)
+          content_tag(:div, nil, class: :application_menu) + content_tag(:div, nil, class: :clear)
         end
       end
     end
-  end
 
-  def application_name app
-    return "Ação em Rede"       if app == :mr
-    return "Panela de Pressão"  if app == :pdp
-    return "Imagine"            if app == :imagine
-    return "Faça Acontecer"     if app == :apoie
-    return "De Olho"            if app == :deolho
-    return "De Guarda"          if app == :deguarda
+    def application_name app
+      return "Ação em Rede"       if app == :mr
+      return "Panela de Pressão"  if app == :pdp
+      return "Imagine"            if app == :imagine
+      return "Faça Acontecer"     if app == :apoie
+      return "De Olho"            if app == :deolho
+      return "De Guarda"          if app == :deguarda
+    end
   end
 end
