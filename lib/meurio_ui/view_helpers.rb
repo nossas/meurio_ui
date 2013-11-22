@@ -9,7 +9,7 @@ module MeurioUi
     end
 
     def meurio_brand_and_user_panel
-      render 'meurio_ui/views/meurio_brand_and_user_panel'
+      render 'meurio_ui/meurio_brand_and_user_panel'
 #      content_tag(:div, class: :meurio_logo_and_user_menu) do
 #        content_tag(:div, class: :row) do
 #          content_tag(:div, class: :meurio_logo) do
