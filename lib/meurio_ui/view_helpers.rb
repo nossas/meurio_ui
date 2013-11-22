@@ -9,33 +9,7 @@ module MeurioUi
     end
 
     def meurio_brand_and_user_panel
-      render 'meurio_ui/meurio_brand_and_user_panel'
-#      content_tag(:div, class: :meurio_logo_and_user_menu) do
-#        content_tag(:div, class: :row) do
-#          content_tag(:div, class: :meurio_logo) do
-#            link_to image_tag('meurio.png'), 'http://meurio.org.br/'
-#          end +
-#          content_tag(:div, class: :user_menu) do
-#            if current_user.present?
-#              content_tag(:div, class: :current_user) do
-#                image_tag(current_user.avatar_url) + current_user.name + content_tag(:span, nil, class: 'icon-triangle-down')
-#              end +
-#              content_tag(:div, class: :current_user_links) do
-#                link_to('Minhas campanhas', user_campaigns_path(current_user)) +
-#                if can?(:moderate, Campaign)
-#                    link_to('Moderar campanhas', unmoderated_campaigns_path)
-#                end +
-#                if can?(:export, User)
-#                  link_to("Exportar todos os usuários", users_path(:format => :csv))
-#                end
-#              end
-#            else
-#              link_to 'Entrar', "http://accounts.meurio.org.br/?redirect_url=#{request.url}", class: :hollow_btn
-#            end
-#          end +
-#          content_tag(:div, nil, class: :clear)
-#        end
-#      end
+      render file: 'meurio_ui/meurio_brand_and_user_panel'
     end
 
     def application_menu app
