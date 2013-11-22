@@ -4,7 +4,7 @@ module MeurioUi
   module ViewHelpers
     def meurio_header_for app
       @app = app
-      render file: 'meurio_header'
+      render file: 'meurio_ui/meurio_header'
     end
 
     def application_name app
