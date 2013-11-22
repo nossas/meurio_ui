@@ -23,14 +23,14 @@
       .meurio_apps
         .current_app
           = link_to(root_path) do
-            = image_tag("#{app}.png")
-            span= application_name(app))
+            = image_tag("#{@app}.png")
+            span= application_name(@app)
           span.icon-arrow-box
         .other_apps
           = link_to('http://meurio.org.br/') do
-            = image_tag('meurio.png')
-            span= application_name(:mr)
-          = link_to('http://paneladepressao.meurio.org.br/')
+            = image_tag('mr20.png')
+            span= application_name(:mr20)
+          = link_to('http://paneladepressao.meurio.org.br/') do
             = image_tag('paneladepressao.png')
             span= application_name(:pdp)
           = link_to('http://imagine.meurio.org.br/') do

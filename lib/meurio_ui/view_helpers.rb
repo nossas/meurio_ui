@@ -8,7 +8,7 @@ module MeurioUi
     end
 
     def application_name app
-      return "Ação em Rede"       if app == :mr
+      return "Ação em Rede"       if app == :mr20
       return "Panela de Pressão"  if app == :pdp
       return "Imagine"            if app == :imagine
       return "Faça Acontecer"     if app == :apoie
