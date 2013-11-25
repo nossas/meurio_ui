@@ -16,6 +16,14 @@ Now you can include Meu Rio UI to your SASS/SCSS file:
 
     @import meurio_ui
 
+Also you will want to include Meu Rio UI to your Javascript manifesto:
+
+    //= require meurio_ui
+
+Meu Rio UI uses remote assets that you can include using (in the application.html.erb file):
+
+    = meurio_ui_assets
+
 ## Usage
 
 All the Meu Rio UI features can be found in the [Meu Rio UI Demo](http://meurio-ui.herokuapp.com/)

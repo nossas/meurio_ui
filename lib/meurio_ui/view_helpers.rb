@@ -15,5 +15,9 @@ module MeurioUi
       return "De Olho"            if app == :deolho
       return "De Guarda"          if app == :deguarda
     end
+    
+    def meurio_ui_assets
+      content_tag :link, nil, rel: "stylesheet", href: "http://i.icomoon.io/public/b6dafa29d0/MeuRio/style.css"
+    end
   end
 end
