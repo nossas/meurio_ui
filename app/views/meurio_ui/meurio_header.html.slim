@@ -2,21 +2,22 @@ header.meurio_header
   .meurio_logo_and_user_menu
     .row
       .meurio_logo= link_to image_tag('meurio.png'), 'http://meurio.org.br/'
-      - if @app == :pdp
+      - if @app == :pdp or @app == :mr20
         .user_menu
           - if current_user.present?
             .current_user
               = image_tag(current_user.avatar_url)
               = current_user.name
-              = content_tag(:span, nil, class: 'icon-triangle-down')
-            .current_user_links
-              = link_to('Minhas campanhas', user_campaigns_path(current_user))
-              - if can?(:moderate, Campaign)
-                = link_to 'Moderar campanhas', unmoderated_campaigns_path
-              - if can?(:export, User)
-                = link_to "Exportar todos os usuários", users_path(:format => :csv)
+              = content_tag(:span, nil, class: 'icon-triangle-down') if @app == :pdp
+            - if @app == :pdp
+              .current_user_links
+                = link_to('Minhas campanhas', user_campaigns_path(current_user))
+                - if can?(:moderate, Campaign)
+                  = link_to 'Moderar campanhas', unmoderated_campaigns_path
+                - if can?(:export, User)
+                  = link_to "Exportar todos os usuários", users_path(:format => :csv)
           - else
-            = link_to 'Entrar', "http://accounts.meurio.org.br/?redirect_url=#{request.url}", class: :hollow_btn
+            = link_to 'Entrar', "http://accounts.meurio.org.br/?redirect_url=#{request.url}", class: :hollow_btn      
       .clear
 
   .meurio_apps_and_application_menu
