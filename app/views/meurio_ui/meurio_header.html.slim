@@ -21,8 +21,11 @@ header.meurio_header
       .meurio_apps
         .current_app
           = link_to(root_path) do
-            = image_tag("#{@app}.png")
-            span= application_name(@app)
+            - if @app == :mr20
+              span Aplicativos
+            - else
+              = image_tag("#{@app}.png")
+              span= application_name(@app)
           span.icon-arrow-box
         .other_apps
           = link_to('http://meurio.org.br/', class: :meurio_app) do
