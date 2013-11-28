@@ -13,25 +13,32 @@ header.meurio_header
       text-align: right
       color: white
       position: relative
-      padding: 7px 0
+      padding: 5px 0
+      font-weight: bold
       .current_user
         line-height: 35px
+        a
+          color: white
         img
-          width: 35px
-          +border-radius(35px)
+          width: 30px
+          +border-radius(30px)
           vertical-align: middle
           margin-right: .5em
         .icon-triangle-down
-          top: 6px
+          font-size: .8em
+          top: 3px
           position: relative
           margin-left: 1em
           cursor: pointer
       .current_user_links
+        background: $dark-green
         position: absolute
-        top: 40px
-        background: $green
+        text-align: left
+        padding: .5em
         z-index: 1000
+        width: 200px
         right: 0
+        top: 49px
         display: none
         a
           display: block
