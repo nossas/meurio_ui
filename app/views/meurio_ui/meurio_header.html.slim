@@ -13,6 +13,7 @@
             .current_user_links
               = link_to "Ver perfil", "http://meurio.org.br/users/#{current_user.id}"
               = link_to "Editar perfil", "http://accounts.meurio.org.br/users/#{current_user.id}/edit"
+              = link_to "Sair", "http://accounts.meurio.org.br/logout"
               = yield :current_user_links
           - else
             = link_to 'Entrar', "http://accounts.meurio.org.br/?redirect_url=#{request.url}", class: :hollow_btn      
