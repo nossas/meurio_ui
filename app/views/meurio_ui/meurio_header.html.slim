@@ -1,7 +1,7 @@
 header.meurio_header
   .meurio_logo_and_user_menu
     .row
-      .meurio_logo= link_to image_tag('meurio.png'), 'http://meurio.org.br/'
+      .meurio_logo= link_to image_tag('mrui_meurio.png'), 'http://meurio.org.br/'
       - if @app == :pdp or @app == :mr20
         .user_menu
           - if current_user.present?
@@ -26,27 +26,27 @@ header.meurio_header
             - if @app == :mr20
               span Aplicativos
             - else
-              = image_tag("#{@app}.png")
+              = image_tag("mrui_#{@app}.png")
               span= application_name(@app)
           span.icon-arrow-box
         .other_apps
           = link_to('http://meurio.org.br/', class: :meurio_app) do
-            = image_tag('mr20.png')
+            = image_tag('mrui_mr20.png')
             span= application_name(:mr20)
           = link_to('http://paneladepressao.meurio.org.br/', class: :meurio_app) do
-            = image_tag('pdp.png')
+            = image_tag('mrui_pdp.png')
             span= application_name(:pdp)
           = link_to('http://imagine.meurio.org.br/', class: :meurio_app) do
-            = image_tag('imagine.png')
+            = image_tag('mrui_imagine.png')
             span= application_name(:imagine)
           = link_to('https://apoie.meurio.org.br/', class: :meurio_app) do
-            = image_tag('apoie.png')
+            = image_tag('mrui_apoie.png')
             span= application_name(:apoie)
           = link_to('http://deolho.meurio.org.br/', class: :meurio_app) do
-            = image_tag('deolho.png')
+            = image_tag('mrui_deolho.png')
             span= application_name(:deolho)
           = link_to('http://deguarda.meurio.org.br/', class: :meurio_app) do
-            = image_tag("deguarda.png")
+            = image_tag("mrui_deguarda.png")
             span= application_name(:deguarda)
       .application_menu= yield :application_menu
       .clear
