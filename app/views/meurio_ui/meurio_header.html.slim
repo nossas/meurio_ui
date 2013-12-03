@@ -14,7 +14,7 @@
               span Conta
               = link_to "Ver perfil", "http://meurio.org.br/users/#{current_user.id}"
               = link_to "Editar perfil", "http://accounts.meurio.org.br/users/#{current_user.id}/edit"
-              = link_to "Sair", "http://accounts.meurio.org.br/logout"
+              = link_to "Sair", "http://accounts.meurio.org.br/logout?redirect_url=#{request.url}"
               - if content_for? :current_user_links
                 span= application_name(@app)
                 = yield :current_user_links
