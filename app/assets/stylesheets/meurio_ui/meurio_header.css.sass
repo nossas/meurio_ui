@@ -19,11 +19,12 @@
         line-height: 35px
         a
           color: white
-        img
-          width: 30px
-          +border-radius(30px)
-          vertical-align: middle
-          margin-right: .5em
+          img
+            width: 30px
+            +border-radius(30px)
+            vertical-align: middle
+            margin-right: .5em
+            display: inline-block
         .icon-triangle-down
           font-size: .8em
           top: 3px
@@ -40,10 +41,14 @@
         right: 0
         top: 49px
         display: none
-        a
+        a, span
           display: block
           padding: 0 1em
           color: white
+        span
+          color: rgba(255, 255, 255, .5)
+          font-weight: normal
+          padding: 0
 
   .meurio_apps_and_application_menu
     line-height: 59px
