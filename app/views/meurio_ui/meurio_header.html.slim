@@ -1,18 +1,18 @@
 .meurio_header
   .meurio_logo_and_user_menu
     .row
-      .meurio_logo= link_to image_tag('mrui_meurio.png'), 'http://temp.meurio.org.br/'
+      .meurio_logo= link_to image_tag('mrui_meurio.png'), ENV['MEURIO_HOST']
       - if @app == :pdp or @app == :mr20 or @app == :accounts
         .user_menu
           - if current_user.present?
             .current_user
-              = link_to "http://temp.meurio.org.br/users/#{current_user.id}" do
+              = link_to "#{ENV['MEURIO_HOST']}/users/#{current_user.id}" do
                 = image_tag(current_user.avatar_url)
                 = current_user.name
               = content_tag(:span, nil, class: 'icon-triangle-down')
             .current_user_links
               span Conta
-              = link_to "Ver perfil", "http://temp.meurio.org.br/users/#{current_user.id}"
+              = link_to "Ver perfil", "#{ENV['MEURIO_HOST']}/users/#{current_user.id}"
               = link_to "Editar perfil", "http://accounts.meurio.org.br/users/#{current_user.id}/edit"
               = link_to "Sair", "http://accounts.meurio.org.br/logout?redirect_url=#{request.url}"
               - if content_for? :current_user_links
@@ -34,12 +34,15 @@
               span= application_name(@app)
           span.icon-arrow-box
         .other_apps
-          = link_to('http://temp.meurio.org.br/', class: :meurio_app) do
+          = link_to(ENV['MEURIO_HOST'], class: :meurio_app) do
             = image_tag('mrui_mr20.png')
             span= application_name(:mr20)
           = link_to('http://paneladepressao.meurio.org.br/', class: :meurio_app) do
             = image_tag('mrui_pdp.png')
             span= application_name(:pdp)
+          = link_to('http://verao.meurio.org.br/', class: :meurio_app) do
+            = image_tag('mrui_vds.png')
+            span= application_name(:vds)
           = link_to('http://imagine.meurio.org.br/', class: :meurio_app) do
             = image_tag('mrui_imagine.png')
             span= application_name(:imagine)

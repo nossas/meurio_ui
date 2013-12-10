@@ -18,3 +18,4 @@ tmp
 *.swp
 *.swo
 .DS_Store
+lib/01_envvars.rb

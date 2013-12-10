@@ -8,12 +8,13 @@ module MeurioUi
     end
 
     def application_name app
-      return "Meu Rio"            if app == :mr20
-      return "Panela de Pressão"  if app == :pdp
-      return "Imagine"            if app == :imagine
-      return "Faça Acontecer"     if app == :apoie
-      return "De Olho"            if app == :deolho
-      return "De Guarda"          if app == :deguarda
+      return "Meu Rio"             if app == :mr20
+      return "Panela de Pressão"   if app == :pdp
+      return "Verão do Saneamento" if app == :vds
+      return "Imagine"             if app == :imagine
+      return "Faça Acontecer"      if app == :apoie
+      return "De Olho"             if app == :deolho
+      return "De Guarda"           if app == :deguarda
     end
     
     def meurio_ui_assets
