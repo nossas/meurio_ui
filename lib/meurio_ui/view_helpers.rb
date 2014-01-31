@@ -21,5 +21,9 @@ module MeurioUi
     def meurio_ui_assets
       content_tag :link, nil, rel: "stylesheet", href: "http://i.icomoon.io/public/b6dafa29d0/MeuRio/style.css"
     end
+
+    def meurio_host
+      Rails.env.production? ? "meurio.org.br" : "meurio-staging.org.br"
+    end
   end
 end

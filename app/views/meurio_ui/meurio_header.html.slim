@@ -13,13 +13,13 @@
             .current_user_links
               span Minha Conta
               = link_to "Ver meu perfil", "#{ENV['MEURIO_HOST']}/users/#{current_user.id}"
-              = link_to "Editar meu perfil", "http://accounts.meurio.org.br/users/#{current_user.id}/edit"
-              = link_to "Sair", "http://accounts.meurio.org.br/logout?redirect_url=#{request.url}"
+              = link_to "Editar meu perfil", "http://accounts.#{meurio_host}/users/#{current_user.id}/edit"
+              = link_to "Sair", "http://accounts.#{meurio_host}/logout?redirect_url=#{request.url}"
               - if content_for? :current_user_links
                 span= application_name(@app)
                 = yield :current_user_links
           - else
-            = link_to 'Entrar', "http://accounts.meurio.org.br/?redirect_url=#{request.url}", class: :hollow_btn      
+            = link_to 'Entrar', "http://accounts.#{meurio_host}/?redirect_url=#{request.url}", class: :hollow_btn      
       .clear
 
   .meurio_apps_and_application_menu
@@ -37,22 +37,22 @@
           = link_to(ENV['MEURIO_HOST'], class: :meurio_app) do
             = image_tag('mrui_mr20.png')
             span= application_name(:mr20)
-          = link_to('http://paneladepressao.meurio.org.br/', class: :meurio_app) do
+          = link_to("http://paneladepressao.#{meurio_host}/", class: :meurio_app) do
             = image_tag('mrui_pdp.png')
             span= application_name(:pdp)
-          = link_to('http://verao.meurio.org.br/', class: :meurio_app) do
+          = link_to("http://verao.#{meurio_host}/", class: :meurio_app) do
             = image_tag('mrui_vds.png')
             span= application_name(:vds)
-          = link_to('http://imagine.meurio.org.br/', class: :meurio_app) do
+          = link_to("http://imagine.#{meurio_host}/", class: :meurio_app) do
             = image_tag('mrui_imagine.png')
             span= application_name(:imagine)
-          = link_to('https://apoie.meurio.org.br/', class: :meurio_app) do
+          = link_to("https://apoie.#{meurio_host}/", class: :meurio_app) do
             = image_tag('mrui_apoie.png')
             span= application_name(:apoie)
-          = link_to('http://deolho.meurio.org.br/', class: :meurio_app) do
+          = link_to("http://deolho.#{meurio_host}/", class: :meurio_app) do
             = image_tag('mrui_deolho.png')
             span= application_name(:deolho)
-          = link_to('http://deguarda.meurio.org.br/', class: :meurio_app) do
+          = link_to("http://deguarda.#{meurio_host}/", class: :meurio_app) do
             = image_tag("mrui_deguarda.png")
             span= application_name(:deguarda)
       .application_menu= yield :application_menu
