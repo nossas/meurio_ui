@@ -19,6 +19,7 @@ module MeurioUi
     end
     
     def meurio_ui_assets
+      return nil if request.protocol == 'https://'
       content_tag :link, nil, rel: "stylesheet", href: "http://i.icomoon.io/public/b6dafa29d0/MeuRio/style.css"
     end
   end
