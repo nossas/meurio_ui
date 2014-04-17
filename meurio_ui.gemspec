@@ -6,7 +6,7 @@ require 'meurio_ui/version'
 Gem::Specification.new do |spec|
   spec.name          = "meurio_ui"
   spec.version       = MeurioUi::Rails::VERSION
-  spec.authors       = ["Nícolas Iensen"]
+  spec.authors       = ['Nícolas Iensen', 'Josias Schneider']
   spec.email         = ["nicolas@iensen.me"]
   spec.description   = %q{Meu Rio UI is a Rails engine that provides user interface components like buttons, fields, icons, fonts, and more patterns for Meu Rio organization}
   spec.summary       = %q{Default UI elements for Meu Rio projects}
