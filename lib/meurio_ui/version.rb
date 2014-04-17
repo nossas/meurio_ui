@@ -1,5 +1,5 @@
 module MeurioUi
   module Rails
-    VERSION = "1.4.2"
+    VERSION = "1.4.4"
   end
 end
