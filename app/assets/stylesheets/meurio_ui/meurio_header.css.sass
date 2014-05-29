@@ -2,26 +2,33 @@
   font-size: 14px
   .row
     overflow: visible
-  .meurio_logo_and_user_menu
-    background: $green
-    line-height: 35px
+  .logos_and_user_menu
+    background: $blue
     padding: 7px 0
-    .meurio_logo
-      img
+    .logos
+      a
+        display: block
         float: left
+        margin-right: 1em
+        img
+          height: 28px
+        &:first-child
+          padding-right: 1em
+          border-right: 1px solid $light-blue
     .user_menu
       text-align: right
       color: white
       position: relative
       font-weight: bold
       float: right
+      line-height: 28px
       .current_user
-        line-height: 35px
+        line-height: 28px
         a
           color: white
           img
-            width: 30px
-            +border-radius(30px)
+            height: 28px
+            +border-radius(28px)
             vertical-align: middle
             margin-right: .5em
             display: inline-block
@@ -32,14 +39,14 @@
           margin-left: 1em
           cursor: pointer
       .current_user_links
-        background: $dark-green
+        background: $dark-blue
         position: absolute
         text-align: left
         padding: .5em
         z-index: 1000
         width: auto
         right: 0
-        top: 42px
+        top: 36px
         display: none
         a, span
           display: block
@@ -131,7 +138,7 @@ a.hollow_btn
   font-size: 14px
   +border-radius(3px)
   &:hover
-    color: $green
+    color: $blue
     background: white
 
 .clear

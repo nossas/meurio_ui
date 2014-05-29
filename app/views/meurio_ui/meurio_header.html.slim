@@ -1,7 +1,10 @@
 .meurio_header
-  .meurio_logo_and_user_menu
+  .logos_and_user_menu
     .row
-      .meurio_logo= link_to image_tag('mrui_meurio.png'), "http://www.#{ENV['MEURIO_DOMAIN']}"
+      .logos
+        = link_to image_tag('mrui_minhascidades.png'), "http://www.#{ENV['MEURIO_DOMAIN']}"
+        = link_to image_tag('mrui_meurio.png'), "http://meurio.org.br", target: :blank
+        = link_to image_tag('mrui_minhasampa.png'), "http://minhasampa.org.br", target: :blank
       - if @app == :pdp || @app == :mr20 || @app == :accounts || @app == :multitude
         .user_menu
           - if current_user.present?
@@ -19,7 +22,7 @@
                 span= application_name(@app)
                 = yield :current_user_links
           - else
-            = link_to 'Entrar', "http://accounts.#{ENV["MEURIO_DOMAIN"]}/?redirect_url=#{request.url}", class: :hollow_btn      
+            = link_to 'Entrar', "http://accounts.#{ENV["MEURIO_DOMAIN"]}/?redirect_url=#{request.url}", class: :hollow_btn
       .clear
 
   .meurio_apps_and_application_menu
