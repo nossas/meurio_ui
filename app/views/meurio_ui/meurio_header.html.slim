@@ -1,29 +1,30 @@
 .meurio_header
-  .logos_and_user_menu
-    .row
-      .logos
-        = link_to image_tag('mrui_minhascidades.png'), "http://www.#{ENV['MEURIO_DOMAIN']}"
-        = link_to image_tag('mrui_meurio.png'), "http://meurio.org.br", target: :blank
-        = link_to image_tag('mrui_minhasampa.png'), "http://minhasampa.org.br", target: :blank
-      - if @app == :pdp || @app == :mr20 || @app == :accounts || @app == :multitude
-        .user_menu
-          - if current_user.present?
-            .current_user
-              = link_to "http://www.#{ENV['MEURIO_DOMAIN']}/users/#{current_user.id}" do
-                = image_tag(current_user.avatar_url)
-                = current_user.name
-              = content_tag(:span, nil, class: 'icon-triangle-down')
-            .current_user_links
-              span Minha Conta
-              = link_to "Ver meu perfil", "http://www.#{ENV['MEURIO_DOMAIN']}/users/#{current_user.id}"
-              = link_to "Editar meu perfil", "http://accounts.#{ENV["MEURIO_DOMAIN"]}/users/#{current_user.id}/edit"
-              = link_to "Sair", "http://accounts.#{ENV["MEURIO_DOMAIN"]}/logout?redirect_url=#{request.url}"
-              - if content_for? :current_user_links
-                span= application_name(@app)
-                = yield :current_user_links
-          - else
-            = link_to 'Entrar', "http://accounts.#{ENV["MEURIO_DOMAIN"]}/?redirect_url=#{request.url}", class: :hollow_btn
-      .clear
+  .contain-to-grid
+    nav.top-bar data={topbar: true}
+      ul.title-area
+        li.name
+          h1= link_to image_tag('mrui_minhascidades.png'), "http://www.#{ENV['MEURIO_DOMAIN']}"
+      section.top-bar-section
+        ul.left
+          li= link_to image_tag('mrui_meurio.png'), "http://meurio.org.br", target: :blank
+          li= link_to image_tag('mrui_minhasampa.png'), "http://minhasampa.org.br", target: :blank
+        - if @app == :pdp || @app == :mr20 || @app == :accounts || @app == :multitude
+          ul.right
+            - if current_user.present?
+              li.has-dropdown
+                = link_to "http://www.#{ENV['MEURIO_DOMAIN']}/users/#{current_user.id}" do
+                  = image_tag(current_user.avatar_url)
+                  = current_user.name
+                ul.dropdown
+                  label Minha Conta
+                  li= link_to "Ver meu perfil", "http://www.#{ENV['MEURIO_DOMAIN']}/users/#{current_user.id}"
+                  li= link_to "Editar meu perfil", "http://accounts.#{ENV["MEURIO_DOMAIN"]}/users/#{current_user.id}/edit"
+                  li= link_to "Sair", "http://accounts.#{ENV["MEURIO_DOMAIN"]}/logout?redirect_url=#{request.url}"
+                  - if content_for? :current_user_links
+                    label= application_name(@app)
+                    = yield :current_user_links
+            - else
+              li= link_to 'Entrar', "http://accounts.#{ENV["MEURIO_DOMAIN"]}/?redirect_url=#{request.url}"
 
   .meurio_apps_and_application_menu
     .row

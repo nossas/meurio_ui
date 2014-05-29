@@ -1,61 +1,43 @@
 .meurio_header
-  font-size: 14px
-  .row
-    overflow: visible
-  .logos_and_user_menu
+  .contain-to-grid, .top-bar
+    // TODO: implement Foundation in the gem so we can set
+    // $topbar-bg then this and many other lines of css become useless
     background: $blue
-    padding: 7px 0
-    .logos
-      a
-        display: block
-        float: left
-        margin-right: 1em
-        img
-          height: 28px
-        &:first-child
-          padding-right: 1em
-          border-right: 1px solid $light-blue
-    .user_menu
-      text-align: right
-      color: white
-      position: relative
-      font-weight: bold
-      float: right
-      line-height: 28px
-      .current_user
-        line-height: 28px
+  .top-bar
+    img
+      height: 28px
+    ul.title-area, section.top-bar-section ul.left
+      padding: 7px 0
+    ul.title-area
+      li.name
+        height: auto
+        border-right: $light-blue 1px solid
         a
-          color: white
+          padding-left: 0
+    section.top-bar-section
+      padding: 0 !important
+      ul.left a
+        background: none
+        padding-right: 0
+      ul.left
+        background: none
+      ul.right
+        background: none
+        li a
+          background: none
+          &:hover
+            background: $dark-blue
+        li.has-dropdown
+          &:hover
+            background: $dark-blue
           img
-            height: 28px
-            +border-radius(28px)
-            vertical-align: middle
-            margin-right: .5em
-            display: inline-block
-        .icon-triangle-down
-          font-size: .8em
-          top: 3px
-          position: relative
-          margin-left: 1em
-          cursor: pointer
-      .current_user_links
-        background: $dark-blue
-        position: absolute
-        text-align: left
-        padding: .5em
-        z-index: 1000
-        width: auto
-        right: 0
-        top: 36px
-        display: none
-        a, span
-          display: block
-          padding: 0 1em
-          color: white
-        span
-          color: rgba(255, 255, 255, .5)
-          font-weight: normal
-          padding: 0
+            display: inline
+            margin-right: .25em
+            +border-radius(100%)
+          ul.dropdown
+            background: $dark-blue
+            li a:hover
+              background: $blue
 
   .meurio_apps_and_application_menu
     line-height: 59px
