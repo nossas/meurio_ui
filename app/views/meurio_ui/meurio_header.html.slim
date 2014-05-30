@@ -7,6 +7,7 @@
       section.top-bar-section
         ul.left
           li= link_to image_tag('mrui_meurio.png'), "http://meurio.org.br", target: :blank
+          li.divider
           li= link_to image_tag('mrui_minhasampa.png'), "http://minhasampa.org.br", target: :blank
         - if @app == :pdp || @app == :mr20 || @app == :accounts || @app == :multitude
           ul.right
