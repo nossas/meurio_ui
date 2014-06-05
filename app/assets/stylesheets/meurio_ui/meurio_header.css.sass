@@ -6,6 +6,7 @@
   .top-bar
     img
       height: 28px
+      display: inherit
     ul.title-area, section.top-bar-section ul.left
       padding: 7px 0
     ul.title-area
@@ -98,6 +99,32 @@
             height: 60px
             &:hover
               opacity: 0.8
+
+    // TODO: implement Foundation in the gem so we can set
+    // dropdown variables instead of overwrite CSS attributes
+    .alert
+      min-height: 10px
+      a.icon-warning
+        width: 16px
+        &:before
+          position: relative
+          top: 2px
+      .f-dropdown.content.open
+        background: $dark-orange
+        border: none
+        padding: .75em
+        color: white
+        font-size: .8em
+        line-height: normal
+        max-width: 250px
+        width: 250px
+        top: 42px !important
+        left: 7px !important
+        +border-radius(2px)
+        a
+          color: yellow
+        &:before
+          border-bottom-color: $dark-orange
 
     .application_menu
       text-align: right

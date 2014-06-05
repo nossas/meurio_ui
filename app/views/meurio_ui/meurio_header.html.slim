@@ -63,5 +63,10 @@
           = link_to("http://deguarda.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
             = image_tag("mrui_deguarda.png")
             span= application_name(:deguarda)
+      .alert
+        - unless [:mr20, :pdp].include?(@app)
+          a.icon-warning href="#" data-dropdown="support-alert"
+          #support-alert.f-dropdown.content data-dropdown-content=true
+            | Esta versão do #{application_name(@app)} está disponível apenas para residentes do Rio de Janeiro. Quer o #{application_name(@app)} na sua cidade? #{link_to "Clique aqui e saiba mais", "#"}
       .application_menu= yield :application_menu
       .clear
