@@ -67,6 +67,6 @@
         - unless [:mr20, :pdp].include?(@app)
           a.icon-warning href="#" data-dropdown="support-alert"
           #support-alert.f-dropdown.content data-dropdown-content=true
-            | Esta versão do #{application_name(@app)} está disponível apenas para residentes do Rio de Janeiro. Quer o #{application_name(@app)} na sua cidade? #{link_to "Clique aqui e saiba mais", "#"}
+            | Esta versão do #{application_name(@app)} está disponível apenas para a cidade do Rio de Janeiro. Em breve disponibilizaremos para toda a #{link_to "Rede Minhas Cidades", "http://www.minhascidades.org.br/"}.
       .application_menu= yield :application_menu
       .clear
