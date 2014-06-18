@@ -13,8 +13,8 @@
             .current_user_links
               span Minha Conta
               = link_to "Ver meu perfil", "http://www.#{ENV['MEURIO_DOMAIN']}/users/#{current_user.id}"
-              = link_to "Editar meu perfil", "http://accounts.#{ENV["MEURIO_DOMAIN"]}/users/#{current_user.id}/edit"
-              = link_to "Sair", "http://accounts.#{ENV["MEURIO_DOMAIN"]}/logout?redirect_url=#{request.url}"
+              = link_to "Editar meu perfil", edit_profile_path
+              = link_to "Sair", sign_out_path
               - if content_for? :current_user_links
                 span= application_name(@app)
                 = yield :current_user_links
