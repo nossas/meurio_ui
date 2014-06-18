@@ -17,10 +17,18 @@ module MeurioUi
       return "De Guarda"           if app == :deguarda
       return "Multitude"           if app == :multitude
     end
-    
+
     def meurio_ui_assets
       return nil if request.protocol == 'https://'
       content_tag :link, nil, rel: "stylesheet", href: "http://i.icomoon.io/public/b6dafa29d0/MeuRio/style.css"
+    end
+
+    def sign_in_path
+      if [:pdp, :multitude, :meurio].include? @app
+        "http://accounts-cas.#{ENV["MEURIO_DOMAIN"]}/?service=#{request.url}"
+      else
+        "http://accounts.#{ENV["MEURIO_DOMAIN"]}/?redirect_url=#{request.url}"
+      end
     end
   end
 end

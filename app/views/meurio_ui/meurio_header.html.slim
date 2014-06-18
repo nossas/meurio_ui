@@ -19,7 +19,7 @@
                 span= application_name(@app)
                 = yield :current_user_links
           - else
-            = link_to 'Entrar', "http://accounts.#{ENV["MEURIO_DOMAIN"]}/?redirect_url=#{request.url}", class: :hollow_btn      
+            = link_to 'Entrar', sign_in_path, class: :hollow_btn
       .clear
 
   .meurio_apps_and_application_menu
