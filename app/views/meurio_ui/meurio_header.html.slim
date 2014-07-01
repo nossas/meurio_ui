@@ -33,7 +33,7 @@
         .current_app
           = link_to(root_path) do
             - if @app == :mr20
-              span Aplicativos
+              span Ferramentas
             - else
               = image_tag("mrui_#{@app}.png")
               span= application_name(@app)
