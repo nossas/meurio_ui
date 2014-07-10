@@ -8,7 +8,7 @@ module MeurioUi
     end
 
     def application_name app
-      return "Meu Rio"             if app == :mr20
+      return "Minhas Cidades"      if app == :mr20
       return "Panela de Pressão"   if app == :pdp
       return "Verão do Saneamento" if app == :vds
       return "Imagine"             if app == :imagine
@@ -17,7 +17,7 @@ module MeurioUi
       return "De Guarda"           if app == :deguarda
       return "Multitude"           if app == :multitude
     end
-    
+
     def meurio_ui_assets
       return nil if request.protocol == 'https://'
       content_tag :link, nil, rel: "stylesheet", href: "http://i.icomoon.io/public/b6dafa29d0/MeuRio/style.css"
