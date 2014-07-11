@@ -6,9 +6,9 @@
           h1= link_to image_tag('mrui_minhascidades.png'), "http://www.#{ENV['MEURIO_DOMAIN']}"
       section.top-bar-section
         ul.left
-          li= link_to image_tag('mrui_meurio.png'), "http://meurio.org.br", target: :blank
+          li= link_to image_tag('mrui_meurio.png'), "http://www.minhascidades.org.br/organizations/1", target: :blank
           li.divider
-          li= link_to image_tag('mrui_minhasampa.png'), "http://minhasampa.org.br", target: :blank
+          li= link_to image_tag('mrui_minhasampa.png'), "http://www.minhascidades.org.br/organizations/2", target: :blank
         - if @app == :pdp || @app == :mr20 || @app == :accounts || @app == :multitude
           ul.right
             - if current_user.present?
