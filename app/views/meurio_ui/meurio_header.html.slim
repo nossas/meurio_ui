@@ -1,26 +1,31 @@
 .meurio_header
-  .meurio_logo_and_user_menu
-    .row
-      .meurio_logo= link_to image_tag('mrui_meurio.png'), "http://www.#{ENV['MEURIO_DOMAIN']}"
-      - if @app == :pdp || @app == :mr20 || @app == :accounts || @app == :multitude
-        .user_menu
-          - if current_user.present?
-            .current_user
-              = link_to "http://www.#{ENV['MEURIO_DOMAIN']}/users/#{current_user.id}" do
-                = image_tag(current_user.avatar_url)
-                = current_user.name
-              = content_tag(:span, nil, class: 'icon-triangle-down')
-            .current_user_links
-              span Minha Conta
-              = link_to "Ver meu perfil", "http://www.#{ENV['MEURIO_DOMAIN']}/users/#{current_user.id}"
-              = link_to "Editar meu perfil", edit_profile_path
-              = link_to "Sair", sign_out_path
-              - if content_for? :current_user_links
-                span= application_name(@app)
-                = yield :current_user_links
-          - else
-            = link_to 'Entrar', sign_in_path, class: :hollow_btn
-      .clear
+  .contain-to-grid
+    nav.top-bar data={topbar: true}
+      ul.title-area
+        li.name
+          h1= link_to image_tag('mrui_minhascidades.png'), "http://www.#{ENV['MEURIO_DOMAIN']}"
+      section.top-bar-section
+        ul.left
+          li= link_to image_tag('mrui_meurio.png'), "http://www.minhascidades.org.br/organizations/1", target: :blank
+          li.divider
+          li= link_to image_tag('mrui_minhasampa.png'), "http://www.minhascidades.org.br/organizations/2", target: :blank
+        - if @app == :pdp || @app == :mr20 || @app == :accounts || @app == :multitude
+          ul.right
+            - if current_user.present?
+              li.has-dropdown
+                = link_to "http://www.#{ENV['MEURIO_DOMAIN']}/users/#{current_user.id}" do
+                  = image_tag(current_user.avatar_url)
+                  = current_user.name
+                ul.dropdown
+                  label Minha Conta
+                  li= link_to "Ver meu perfil", "http://www.#{ENV['MEURIO_DOMAIN']}/users/#{current_user.id}"
+                  li= link_to "Editar meu perfil", edit_profile_path
+                  li= link_to "Sair", sign_out_path
+                  - if content_for? :current_user_links
+                    label= application_name(@app)
+                    = yield :current_user_links
+            - else
+              li= link_to 'Entrar', sign_in_path
 
   .meurio_apps_and_application_menu
     .row
@@ -28,14 +33,14 @@
         .current_app
           = link_to(root_path) do
             - if @app == :mr20
-              span Aplicativos
+              span Ferramentas
             - else
               = image_tag("mrui_#{@app}.png")
               span= application_name(@app)
           span.icon-arrow-box
         .other_apps
           = link_to("http://www.#{ENV["MEURIO_DOMAIN"]}", class: :meurio_app) do
-            = image_tag('mrui_mr20.png')
+            = image_tag('mrui_minhascidades2.png')
             span= application_name(:mr20)
           = link_to("http://paneladepressao.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
             = image_tag('mrui_pdp.png')
@@ -49,7 +54,7 @@
           = link_to("http://imagine.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
             = image_tag('mrui_imagine.png')
             span= application_name(:imagine)
-          = link_to("https://apoie.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
+          = link_to("http://apoie.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
             = image_tag('mrui_apoie.png')
             span= application_name(:apoie)
           = link_to("http://deolho.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
@@ -58,5 +63,10 @@
           = link_to("http://deguarda.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
             = image_tag("mrui_deguarda.png")
             span= application_name(:deguarda)
+      .alert
+        - unless [:mr20, :pdp, :multitude].include?(@app)
+          a.icon-warning href="#" data-dropdown="support-alert"
+          #support-alert.f-dropdown.content data-dropdown-content=true
+            | Esta versão do #{application_name(@app)} está disponível apenas para a cidade do Rio de Janeiro. Em breve disponibilizaremos para toda a #{link_to "Rede Minhas Cidades", "http://www.minhascidades.org.br/"}.
       .application_menu= yield :application_menu
       .clear
