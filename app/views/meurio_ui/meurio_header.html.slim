@@ -9,7 +9,7 @@
           li= link_to image_tag('mrui_meurio.png'), "http://www.minhascidades.org.br/organizations/1", target: :blank
           li.divider
           li= link_to image_tag('mrui_minhasampa.png'), "http://www.minhascidades.org.br/organizations/2", target: :blank
-        - if @app == :pdp || @app == :mr20 || @app == :accounts || @app == :multitude
+        - if @app == :pdp || @app == :minhascidades || @app == :accounts || @app == :multitude
           ul.right
             - if current_user.present?
               li.has-dropdown
@@ -32,7 +32,7 @@
       .meurio_apps
         .current_app
           = link_to(root_path) do
-            - if @app == :mr20
+            - if @app == :minhascidades
               span Ferramentas
             - else
               = image_tag("mrui_#{@app}.png")
@@ -41,7 +41,7 @@
         .other_apps
           = link_to("http://www.#{ENV["MEURIO_DOMAIN"]}", class: :meurio_app) do
             = image_tag('mrui_minhascidades2.png')
-            span= application_name(:mr20)
+            span= application_name(:minhascidades)
           = link_to("http://paneladepressao.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
             = image_tag('mrui_pdp.png')
             span= application_name(:pdp)
@@ -64,7 +64,7 @@
             = image_tag("mrui_deguarda.png")
             span= application_name(:deguarda)
       .alert
-        - unless [:mr20, :pdp, :multitude].include?(@app)
+        - unless [:minhascidades, :pdp, :multitude].include?(@app)
           a.icon-warning href="#" data-dropdown="support-alert"
           #support-alert.f-dropdown.content data-dropdown-content=true
             | Esta versão do #{application_name(@app)} está disponível apenas para a cidade do Rio de Janeiro. Em breve disponibilizaremos para toda a #{link_to "Rede Minhas Cidades", "http://www.minhascidades.org.br/"}.
