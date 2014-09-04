@@ -52,6 +52,7 @@
     background: white
     padding: 10px 0
     .meurio_apps
+      +grid-column(3)
       cursor: pointer
       position: relative
       overflow: visible
@@ -103,6 +104,7 @@
     // TODO: implement Foundation in the gem so we can set
     // dropdown variables instead of overwrite CSS attributes
     .alert
+      +grid-column(1)
       min-height: 10px
       a.icon-warning
         color: $dark-orange
@@ -128,6 +130,7 @@
           border-bottom-color: $dark-orange
 
     .application_menu
+      +grid-column(8)
       text-align: right
       a
         display: inline-block
@@ -136,6 +139,7 @@
         font-weight: bold
         color: black
         &.btn
+          +border-radius(2px)
           background: $orange
           color: white
           padding: .5em

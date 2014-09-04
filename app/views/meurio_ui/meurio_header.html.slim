@@ -9,7 +9,7 @@
           li= link_to image_tag('mrui_meurio.png'), "http://www.minhascidades.org.br/organizations/1", target: :blank
           li.divider
           li= link_to image_tag('mrui_minhasampa.png'), "http://www.minhascidades.org.br/organizations/2", target: :blank
-        - if @app == :pdp || @app == :minhascidades || @app == :accounts || @app == :multitude
+        - if [:minhascidades, :pdp, :multitude, :compartilhaco, :accounts].include?(@app)
           ul.right
             - if current_user.present?
               li.has-dropdown
@@ -64,7 +64,7 @@
             = image_tag("mrui_deguarda.png")
             span= application_name(:deguarda)
       .alert
-        - unless [:minhascidades, :pdp, :multitude].include?(@app)
+        - unless [:minhascidades, :pdp, :multitude, :compartilhaco].include?(@app)
           a.icon-warning href="#" data-dropdown="support-alert"
           #support-alert.f-dropdown.content data-dropdown-content=true
             | Esta versão do #{application_name(@app)} está disponível apenas para a cidade do Rio de Janeiro. Em breve disponibilizaremos para toda a #{link_to "Rede Minhas Cidades", "http://www.minhascidades.org.br/"}.
