@@ -1,9 +1,10 @@
 .meurio_header
   .contain-to-grid
-    nav.top-bar data={topbar: true}
+    nav.top-bar data={topbar: true} role="navigation"
       ul.title-area
         li.name
           h1= link_to image_tag('mrui_minhascidades.png'), "http://www.#{ENV['MEURIO_DOMAIN']}"
+        li.toggle-topbar.icon-list
       section.top-bar-section
         ul.left
           li= link_to image_tag('mrui_meurio.png'), "http://www.minhascidades.org.br/organizations/1", target: :blank
