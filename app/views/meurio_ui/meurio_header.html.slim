@@ -64,6 +64,9 @@
           = link_to("http://deguarda.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
             = image_tag("mrui_deguarda.png")
             span= application_name(:deguarda)
+          = link_to("http://compartilhaco.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
+            = image_tag("mrui_compartilhaco.png")
+            span= application_name(:compartilhaco)
       .alert
         - unless [:minhascidades, :pdp, :multitude, :compartilhaco].include?(@app)
           a.icon-warning href="#" data-dropdown="support-alert"
