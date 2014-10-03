@@ -10,7 +10,6 @@ module MeurioUi
     def application_name app
       return "Nossas Cidades"      if app == :minhascidades
       return "Panela de Pressão"   if app == :pdp
-      return "Verão do Saneamento" if app == :vds
       return "Imagine"             if app == :imagine
       return "Faça Acontecer"      if app == :apoie
       return "De Olho"             if app == :deolho
