@@ -8,7 +8,7 @@ module MeurioUi
     end
 
     def application_name app
-      return "Minhas Cidades"      if app == :minhascidades
+      return "Nossas Cidades"      if app == :minhascidades
       return "Panela de Pressão"   if app == :pdp
       return "Verão do Saneamento" if app == :vds
       return "Imagine"             if app == :imagine
