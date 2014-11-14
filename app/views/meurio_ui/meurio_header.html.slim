@@ -7,9 +7,11 @@
         li.toggle-topbar.icon-list
       section.top-bar-section
         ul.left
-          li= link_to image_tag('mrui_meurio.png'), "http://www.nossascidades.org/organizations/1", target: :blank
+          li= link_to image_tag('mrui_meurio.png'), "http://www.nossascidades.org/organizations/1", target: :blank, class: :organization
           li.divider
-          li= link_to image_tag('mrui_minhasampa.png'), "http://www.nossascidades.org/organizations/2", target: :blank
+          li= link_to image_tag('mrui_minhasampa.png'), "http://www.nossascidades.org/organizations/2", target: :blank, class: :organization
+          li.divider
+          li.has-form= link_to "Seja um(a) fundador(a)", "#{ENV['MEURIO_HOST']}/founders", class: [:button, :radius]
         - if [:minhascidades, :pdp, :multitude, :compartilhaco, :accounts].include?(@app)
           ul.right
             - if current_user.present?

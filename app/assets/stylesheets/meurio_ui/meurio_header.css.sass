@@ -25,10 +25,10 @@
           cursor: pointer
     section.top-bar-section
       padding: 0 !important
-      ul.left a
-        background: none
       ul.left
         background: none
+        a.organization
+          background: none
         li:first-child
           padding-left: 1em
         .divider
@@ -36,6 +36,12 @@
           background: image-url("mrui_divider.jpg") no-repeat center center
           width: 5px
           height: 28px
+        li.has-form
+          height: auto
+          a.button
+            top: 0
+            background: $primary-color
+            letter-spacing: .5px
       ul.right
         background: none
         li a
