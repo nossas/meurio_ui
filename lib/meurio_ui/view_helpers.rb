@@ -25,7 +25,7 @@ module MeurioUi
     end
 
     def sign_in_path
-      if [:pdp, :multitude, :minhascidades, :compartilhaco].include? @app
+      if [:pdp, :multitude, :minhascidades, :compartilhaco, :deolho2].include? @app
         "http://accounts.#{ENV["MEURIO_DOMAIN"]}/?service=#{request.url}"
       else
         "http://accounts.#{ENV["MEURIO_DOMAIN"]}/?redirect_url=#{request.url}"
@@ -33,7 +33,7 @@ module MeurioUi
     end
 
     def sign_out_path
-      if [:pdp, :multitude, :minhascidades, :compartilhaco].include? @app
+      if [:pdp, :multitude, :minhascidades, :compartilhaco, :deolho2].include? @app
         "http://accounts.#{ENV["MEURIO_DOMAIN"]}/logout?service=#{request.url}"
       else
         "http://accounts.#{ENV["MEURIO_DOMAIN"]}/logout?redirect_url=#{request.url}"
@@ -41,7 +41,7 @@ module MeurioUi
     end
 
     def edit_profile_path
-      if [:pdp, :multitude, :minhascidades, :compartilhaco].include? @app
+      if [:pdp, :multitude, :minhascidades, :compartilhaco, :deolho2].include? @app
         "http://accounts.#{ENV["MEURIO_DOMAIN"]}/users/#{current_user.id}/edit"
       else
         "http://accounts.#{ENV["MEURIO_DOMAIN"]}/users/#{current_user.id}/edit"
