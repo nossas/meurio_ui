@@ -67,7 +67,7 @@
             = image_tag("mrui_compartilhaco.png")
             span= application_name(:compartilhaco)
       .alert
-        - unless [:minhascidades, :pdp, :multitude, :compartilhaco].include?(@app)
+        - unless [:minhascidades, :pdp, :multitude, :compartilhaco, :deolho2].include?(@app)
           a.icon-warning href="#" data-dropdown="support-alert"
           #support-alert.f-dropdown.content data-dropdown-content=true
             | Esta versão do #{application_name(@app)} está disponível apenas para a cidade do Rio de Janeiro. Em breve disponibilizaremos para toda a #{link_to "Rede Nossas Cidades", "http://www.nossascidades.org/"}.
