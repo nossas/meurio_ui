@@ -12,7 +12,7 @@
           li= link_to image_tag('mrui_minhasampa.png'), "http://www.nossascidades.org/organizations/2", target: :blank, class: :organization
           li.divider
           li.has-form= link_to "Seja um(a) fundador(a)", "#{ENV['MEURIO_HOST']}/founders", class: [:button, :radius]
-        - if [:minhascidades, :pdp, :multitude, :compartilhaco, :accounts, :deolho2].include?(@app)
+        - if [:minhascidades, :pdp, :multitude, :compartilhaco, :accounts, :legislando].include?(@app)
           ul.right
             - if current_user.present?
               li.has-dropdown
@@ -67,7 +67,7 @@
             = image_tag("mrui_compartilhaco.png")
             span= application_name(:compartilhaco)
       .alert
-        - unless [:minhascidades, :pdp, :multitude, :compartilhaco, :deolho2].include?(@app)
+        - unless [:minhascidades, :pdp, :multitude, :compartilhaco, :legislando].include?(@app)
           a.icon-warning href="#" data-dropdown="support-alert"
           #support-alert.f-dropdown.content data-dropdown-content=true
             | Esta versão do #{application_name(@app)} está disponível apenas para a cidade do Rio de Janeiro. Em breve disponibilizaremos para toda a #{link_to "Rede Nossas Cidades", "http://www.nossascidades.org/"}.
