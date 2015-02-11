@@ -16,7 +16,7 @@ module MeurioUi
       return "De Guarda"           if app == :deguarda
       return "Multitude"           if app == :multitude
       return "Compartilhaço"       if app == :compartilhaco
-      return "De Olho 2"           if app == :legislando
+      return "Legislando"          if app == :legislando
     end
 
     def meurio_ui_assets
