@@ -35,7 +35,11 @@
             span.icon-list
             | Menu
           ul.dropdown
+            li
+              label= application_name(@app)
             = yield :application_menu
+            li
+              label A Rede
             li.has-dropdown
               a Nossas plataformas
               ul.dropdown
@@ -67,5 +71,5 @@
               a Nossas cidades
               ul.dropdown
                 - Organization.all.each do |organization|
-                  li= link_to root_path do
+                  li= link_to "http://#{ENV["MEURIO_DOMAIN"]}/organizations/#{organization.id}" do
                     = organization.city
