@@ -1,183 +1,32 @@
-.meurio_header
-  .contain-to-grid, .top-bar
-    // TODO: implement Foundation in the gem so we can set
-    // $topbar-bg then this and many other lines of css become useless
-    background: $blue
-  .top-bar
-    img
-      height: 28px
-      display: inherit
-    ul.title-area, section.top-bar-section ul.left
-      padding: 7px 0
-    ul.title-area
-      li.name
-        height: auto
-        border-right: $light-blue 1px solid
-        padding-right: 1em
-        padding-left: .5em
-        a
-          padding-left: 0
-      li.toggle-topbar.icon-list
-        margin-top: 5px
-        &:before
-          color: white
-          font-size: rem-calc(32)
-          cursor: pointer
-    section.top-bar-section
-      padding: 0 !important
-      ul li
-        background: none
-      ul.left
-        background: none
-        a.organization
-          background: none
-        li:first-child
-          padding-left: 1em
-        .divider
-          border: 0
-          background: image-url("mrui_divider.jpg") no-repeat center center
-          width: 5px
-          height: 28px
-        li.has-form
-          height: auto
-          background: none
-          a.button
-            top: 0
-            background: $blue2
-            letter-spacing: .5px
-      ul.right
-        background: none
-        li a
-          background: none
-          &:hover
-            background: $dark-blue
-        li.has-dropdown
-          &:hover
-            background: $dark-blue
-          img
-            display: inline
-            margin-right: .25em
-            +border-radius(100%)
-          ul.dropdown
-            background: $dark-blue
-            a
-              background: $dark-blue
-            li a:hover
-              background: $blue
+// Override Foundation
 
-  .meurio_apps_and_application_menu
-    line-height: 59px
-    background: white
-    padding: 10px 0
-    .meurio_apps
-      cursor: pointer
-      position: relative
-      overflow: visible
-      font-size: 20px
-      font-weight: bold
-      a
-        color: black
-      .current_app
-        img
-          vertical-align: middle
-          margin-right: .5em
-          float: left
-        span
-          display: block
-          float: left
-        span.icon-arrow-box
-          position: relative
-          top: 19px
-          margin-left: 1em
-          color: #a7a8ac
-          font-size: .9em
-      .other_apps
-        position: absolute
-        background: white
-        top: 59px
-        z-index: 1000
-        width: 904px
-        padding: 2em 1em 1em 1em
-        display: none
-        .meurio_app
-          font-size: .7em
-          font-weight: normal
-          display: block
-          color: black
-          float: left
-          width: 88px
-          margin: 0 10px
-          text-align: center
-          line-height: normal
-          span
-            display: block
-          img
-            display: inline-block
-            margin-bottom: .5em
-            height: 60px
-            &:hover
-              opacity: 0.8
+$topbar-bg-color: #2F434E
+$topbar-dropdown-link-bg-hover: #2E5365
+$topbar-link-bg-active: #23729C
 
-    // TODO: implement Foundation in the gem so we can set
-    // dropdown variables instead of overwrite CSS attributes
-    .alert
-      min-height: 10px
-      a.icon-warning
-        color: $dark-orange
-        display: inline-block
-        line-height: 30px
-        &:before
-          position: relative
-          top: 1px
-          left: 8px
-      .f-dropdown.content.open
-        background: $dark-orange
-        border: none
-        padding: .75em
-        color: white
-        font-size: .8em
-        line-height: normal
-        max-width: 250px
-        width: 250px
-        +border-radius(2px)
-        a
-          color: yellow
-        &:before
-          border-bottom-color: $dark-orange
+$topbar-dropdown-bg: $topbar-bg-color
+$topbar-dropdown-link-bg: $topbar-bg-color
+$topbar-link-bg-hover: $topbar-dropdown-link-bg-hover
+$topbar-dropdown-label-bg: $topbar-bg-color
+$topbar-dropdown-label-color: lighten($topbar-bg-color, 30%)
+$topbar-link-bg-active-hover: lighten($topbar-link-bg-active, 10%)
 
-    .application_menu
-      text-align: right
-      .button
-        margin: 0 0 0 1.5em
-      a.link
-        display: inline-block
-        margin-left: 1.5em
-        font-size: 14px
-        font-weight: bold
-        color: black
-        &.btn
-          +border-radius(2px)
-          background: $orange
-          color: white
-          padding: .5em
-          display: inline-block
-          width: auto
-          line-height: normal
-          &:hover
-            text-decoration: none
-        &:hover
-          text-decoration: underline
+.has-dropdown a:after
+  color: #0995C3
+  font-size: 1em
 
-a.hollow_btn
-  color: white
-  border: 2px solid white
-  padding: 5px 10px
-  font-weight: bolder
-  font-size: 14px
-  +border-radius(3px)
-  &:hover
-    color: $blue
-    background: white
+// Components
 
-.clear
-  clear: both
+.ocui-UserMenu-avatar, .ocui-AppMenu-avatar
+  width: 25px
+  margin-right: 5px
+
+.ocui-AppMenu .icon-list:before
+  font-size: 25px
+  top: 7px
+  position: relative
+
+.ocui-AppMenu .icon-plus:before
+  top: 1px
+  position: relative
+  margin-right: .25em

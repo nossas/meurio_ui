@@ -1,75 +1,71 @@
-.meurio_header
-  .contain-to-grid
-    nav.top-bar data={topbar: true} role="navigation"
-      ul.title-area
-        li.name
-          h1= link_to image_tag('mrui_nossascidades.png'), "http://www.#{ENV['MEURIO_DOMAIN']}"
-        li.toggle-topbar.icon-list
-      section.top-bar-section
-        ul.left
-          li= link_to image_tag('mrui_meurio.png'), "http://www.nossascidades.org/organizations/1", target: :blank, class: :organization
-          li.divider
-          li= link_to image_tag('mrui_minhasampa.png'), "http://www.nossascidades.org/organizations/2", target: :blank, class: :organization
-          li.divider
-          li.has-form= link_to "Seja um(a) fundador(a)", "#{ENV['MEURIO_HOST']}/founders", class: [:button, :radius]
-        - if [:minhascidades, :pdp, :multitude, :compartilhaco, :accounts, :legislando].include?(@app)
-          ul.right
-            - if current_user.present?
-              li.has-dropdown
-                = link_to "http://www.#{ENV['MEURIO_DOMAIN']}/users/#{current_user.id}" do
-                  = image_tag(current_user.avatar_url)
-                  = current_user.name
-                ul.dropdown
-                  label Minha Conta
-                  li= link_to "Ver meu perfil", "http://www.#{ENV['MEURIO_DOMAIN']}/users/#{current_user.id}"
-                  li= link_to "Editar meu perfil", edit_profile_path
-                  li= link_to "Sair", sign_out_path
-                  - if content_for? :current_user_links
-                    label= application_name(@app)
-                    = yield :current_user_links
-            - else
-              li= link_to 'Entrar', sign_in_path
-
-  .meurio_apps_and_application_menu
-    .row
-      .meurio_apps
-        .current_app
+.ocui-Header.contain-to-grid
+  nav.top-bar data-topbar=true data-options="back_text: Voltar" role="navigation"
+    ul.title-area
+      li.name
+        h1
           = link_to(root_path) do
-            - if @app == :minhascidades
-              span Ferramentas
-            - else
-              = image_tag("mrui_#{@app}.png")
-              span= application_name(@app)
-          span.icon-arrow-box
-        .other_apps
-          = link_to("http://www.#{ENV["MEURIO_DOMAIN"]}", class: :meurio_app) do
-            = image_tag('mrui_minhascidades2.png')
-            span= application_name(:minhascidades)
-          = link_to("http://paneladepressao.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
-            = image_tag('mrui_pdp.png')
-            span= application_name(:pdp)
-          = link_to("http://multitude.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
-            = image_tag('mrui_multitude.png')
-            span= application_name(:multitude)
-          = link_to("http://imagine.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
-            = image_tag('mrui_imagine.png')
-            span= application_name(:imagine)
-          = link_to("http://apoie.meurio.org.br/", class: :meurio_app) do
-            = image_tag('mrui_apoie.png')
-            span= application_name(:apoie)
-          = link_to("http://deolho.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
-            = image_tag('mrui_deolho.png')
-            span= application_name(:deolho)
-          = link_to("http://deguarda.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
-            = image_tag("mrui_deguarda.png")
-            span= application_name(:deguarda)
-          = link_to("http://compartilhaco.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
-            = image_tag("mrui_compartilhaco.png")
-            span= application_name(:compartilhaco)
-      .alert
-        - unless [:minhascidades, :pdp, :multitude, :compartilhaco, :legislando].include?(@app)
-          a.icon-warning href="#" data-dropdown="support-alert"
-          #support-alert.f-dropdown.content data-dropdown-content=true
-            | Esta versão do #{application_name(@app)} está disponível apenas para a cidade do Rio de Janeiro. Em breve disponibilizaremos para toda a #{link_to "Rede Nossas Cidades", "http://www.nossascidades.org/"}.
-      .application_menu= yield :application_menu
-      .clear
+            = image_tag("mrui_#{@app}.png", class: "ocui-AppMenu-avatar")
+            = application_name(@app)
+      li.toggle-topbar.menu-icon
+        a
+          span= " "
+
+    section.top-bar-section
+      ul.right
+        - if current_user.present?
+          li.ocui-UserMenu.has-dropdown
+            = link_to "http://www.#{ENV['MEURIO_DOMAIN']}/users/#{current_user.id}" do
+              = image_tag(current_user.avatar_url, class: "ocui-UserMenu-avatar")
+              = current_user.name
+            ul.dropdown
+              li
+                label Minha Conta
+              li= link_to "Ver meu perfil", "http://www.#{ENV['MEURIO_DOMAIN']}/users/#{current_user.id}"
+              li= link_to "Editar meu perfil", edit_profile_path
+              li= link_to "Sair", sign_out_path
+              - if content_for? :current_user_links
+                label= application_name(@app)
+                = yield :current_user_links
+        - else
+          li= link_to 'Entrar', sign_in_path
+
+      ul.left
+        li.ocui-AppMenu.has-dropdown
+          a
+            span.icon-list
+            | Menu
+          ul.dropdown
+            = yield :application_menu
+            li.has-dropdown
+              a Nossas plataformas
+              ul.dropdown
+                li= link_to("http://www.#{ENV["MEURIO_DOMAIN"]}", class: :meurio_app) do
+                  = image_tag('mrui_minhascidades2.png', class: "ocui-AppMenu-avatar")
+                  = application_name(:minhascidades)
+                li= link_to("http://paneladepressao.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
+                  = image_tag('mrui_pdp.png', class: "ocui-AppMenu-avatar")
+                  = application_name(:pdp)
+                li= link_to("http://multitude.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
+                  = image_tag('mrui_multitude.png', class: "ocui-AppMenu-avatar")
+                  = application_name(:multitude)
+                li= link_to("http://imagine.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
+                  = image_tag('mrui_imagine.png', class: "ocui-AppMenu-avatar")
+                  = application_name(:imagine)
+                li= link_to("http://apoie.meurio.org.br/", class: :meurio_app) do
+                  = image_tag('mrui_apoie.png', class: "ocui-AppMenu-avatar")
+                  = application_name(:apoie)
+                li= link_to("http://deolho.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
+                  = image_tag('mrui_deolho.png', class: "ocui-AppMenu-avatar")
+                  = application_name(:deolho)
+                li= link_to("http://deguarda.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
+                  = image_tag("mrui_deguarda.png", class: "ocui-AppMenu-avatar")
+                  = application_name(:deguarda)
+                li= link_to("http://compartilhaco.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
+                  = image_tag("mrui_compartilhaco.png", class: "ocui-AppMenu-avatar")
+                  = application_name(:compartilhaco)
+            li.has-dropdown
+              a Nossas cidades
+              ul.dropdown
+                - Organization.all.each do |organization|
+                  li= link_to root_path do
+                    = organization.city
