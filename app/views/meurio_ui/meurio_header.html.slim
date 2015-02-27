@@ -12,6 +12,9 @@
 
     section.top-bar-section
       ul.right
+        li
+          = link_to "http://www.#{ENV['MEURIO_DOMAIN']}" do
+            = image_tag "mrui_nossascidades.png", class: "ocui-OurCitiesLogo"
         - if current_user.present?
           li.ocui-UserMenu.has-dropdown
             = link_to "http://www.#{ENV['MEURIO_DOMAIN']}/users/#{current_user.id}" do
@@ -31,7 +34,7 @@
 
       ul.left
         li.ocui-AppMenu.has-dropdown
-          a
+          a.ocui-AppMenu-menu-button
             span.icon-list
             | Menu
           ul.dropdown
@@ -72,4 +75,6 @@
               ul.dropdown
                 - Organization.all.each do |organization|
                   li= link_to "http://#{ENV["MEURIO_DOMAIN"]}/organizations/#{organization.id}" do
-                    = organization.city
+                    = organization.name
+            li.active
+              = link_to "Seja um(a) fundador(a)", "#{ENV['MEURIO_HOST']}/founders"
