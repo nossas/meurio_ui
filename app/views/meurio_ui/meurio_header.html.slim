@@ -75,6 +75,7 @@
               ul.dropdown
                 - Organization.all.each do |organization|
                   li= link_to "http://#{ENV["MEURIO_DOMAIN"]}/organizations/#{organization.id}" do
+                    = image_tag organization.avatar_url, class: "ocui-AppMenu-avatar"
                     = organization.name
             li.active
               = link_to "Seja um(a) fundador(a)", "#{ENV['MEURIO_HOST']}/founders"
