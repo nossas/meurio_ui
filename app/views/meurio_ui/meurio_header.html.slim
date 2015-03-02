@@ -27,7 +27,8 @@
               li= link_to "Editar meu perfil", edit_profile_path
               li= link_to "Sair", sign_out_path
               - if content_for? :current_user_links
-                label= application_name(@app)
+                li
+                  label= application_name(@app)
                 = yield :current_user_links
         - else
           li= link_to 'Entrar', sign_in_path
