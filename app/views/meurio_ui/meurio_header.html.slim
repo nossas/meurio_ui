@@ -7,7 +7,7 @@
             = image_tag("mrui_#{@app}.png", class: "ocui-AppMenu-avatar")
             = application_name(@app)
       li.toggle-topbar.menu-icon
-        a
+        a href="#"
           span= " "
 
     section.top-bar-section
@@ -35,7 +35,7 @@
 
       ul.left
         li.ocui-AppMenu.has-dropdown
-          a.ocui-AppMenu-menu-button
+          a.ocui-AppMenu-menu-button href="#"
             span.icon-list
             | Menu
           ul.dropdown
@@ -45,7 +45,7 @@
             li
               label A Rede
             li.has-dropdown
-              a Nossas plataformas
+              a href="#" Nossas plataformas
               ul.dropdown
                 li= link_to("http://www.#{ENV["MEURIO_DOMAIN"]}", class: :meurio_app) do
                   = image_tag('mrui_minhascidades.png', class: "ocui-AppMenu-avatar")
@@ -72,7 +72,7 @@
                   = image_tag("mrui_compartilhaco.png", class: "ocui-AppMenu-avatar")
                   = application_name(:compartilhaco)
             li.has-dropdown
-              a Nossas cidades
+              a href="#" Nossas cidades
               ul.dropdown
                 - Organization.all.each do |organization|
                   li= link_to "http://#{ENV["MEURIO_DOMAIN"]}/organizations/#{organization.id}" do
