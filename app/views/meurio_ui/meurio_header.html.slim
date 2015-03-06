@@ -15,6 +15,8 @@
         li
           = link_to "http://www.#{ENV['MEURIO_DOMAIN']}" do
             = image_tag "mrui_nossascidades.png", class: "ocui-OurCitiesLogo"
+        li.active
+          = link_to "Seja um(a) fundador(a)", "#{ENV['MEURIO_HOST']}/founders"
         - if current_user.present?
           li.ocui-UserMenu.has-dropdown
             = link_to "http://www.#{ENV['MEURIO_DOMAIN']}/users/#{current_user.id}" do
@@ -78,5 +80,3 @@
                   li= link_to "http://#{ENV["MEURIO_DOMAIN"]}/organizations/#{organization.id}" do
                     = image_tag organization.avatar_url, class: "ocui-AppMenu-avatar"
                     = organization.name
-            li.active
-              = link_to "Seja um(a) fundador(a)", "#{ENV['MEURIO_HOST']}/founders"
