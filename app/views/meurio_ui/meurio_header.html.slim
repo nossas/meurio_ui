@@ -80,3 +80,4 @@
                   li= link_to "http://#{ENV["MEURIO_DOMAIN"]}/organizations/#{organization.id}" do
                     = image_tag organization.avatar_url, class: "ocui-AppMenu-avatar"
                     = organization.name
+        = yield :main_menu
