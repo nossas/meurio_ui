@@ -73,6 +73,9 @@
                 li= link_to("http://compartilhaco.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
                   = image_tag("mrui_compartilhaco.png", class: "ocui-AppMenu-avatar")
                   = application_name(:compartilhaco)
+                li= link_to("http://legislando.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
+                  = image_tag("mrui_legislando.png", class: "ocui-AppMenu-avatar")
+                  = application_name(:legislando)
             li.has-dropdown
               a href="#" Nossas cidades
               ul.dropdown
