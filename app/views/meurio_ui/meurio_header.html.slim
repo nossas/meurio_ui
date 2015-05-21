@@ -61,9 +61,15 @@
                 li= link_to("http://imagine.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
                   = image_tag('mrui_imagine.png', class: "ocui-AppMenu-avatar")
                   = application_name(:imagine)
-                li= link_to("http://apoie.meurio.org.br/", class: :meurio_app) do
-                  = image_tag('mrui_apoie.png', class: "ocui-AppMenu-avatar")
-                  = application_name(:apoie)
+                li.has-dropdown
+                  = link_to("#", class: :meurio_app) do
+                    = image_tag('mrui_apoie.png', class: "ocui-AppMenu-avatar")
+                    | Apoie
+                  ul.dropdown
+                    - Organization.where(name: ['Meu Rio', 'Minha Sampa']).each do |org|
+                      li= link_to "http://apoie.#{org.slug}.org.br" do
+                        = image_tag org.avatar_url, class: "ocui-AppMenu-avatar"
+                        | Apoie #{org.name}
                 li= link_to("http://deolho.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
                   = image_tag('mrui_deolho.png', class: "ocui-AppMenu-avatar")
                   = application_name(:deolho)
