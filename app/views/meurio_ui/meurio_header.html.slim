@@ -55,12 +55,6 @@
                 li= link_to("http://paneladepressao.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
                   = image_tag('mrui_pdp.png', class: "ocui-AppMenu-avatar")
                   = application_name(:pdp)
-                li= link_to("http://multitude.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
-                  = image_tag('mrui_multitude.png', class: "ocui-AppMenu-avatar")
-                  = application_name(:multitude)
-                li= link_to("http://imagine.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
-                  = image_tag('mrui_imagine.png', class: "ocui-AppMenu-avatar")
-                  = application_name(:imagine)
                 li.has-dropdown
                   = link_to("#", class: :meurio_app) do
                     = image_tag('mrui_apoie.png', class: "ocui-AppMenu-avatar")
@@ -76,9 +70,6 @@
                 li= link_to("http://deguarda.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
                   = image_tag("mrui_deguarda.png", class: "ocui-AppMenu-avatar")
                   = application_name(:deguarda)
-                li= link_to("http://compartilhaco.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
-                  = image_tag("mrui_compartilhaco.png", class: "ocui-AppMenu-avatar")
-                  = application_name(:compartilhaco)
                 li= link_to("http://legislando.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
                   = image_tag("mrui_legislando.png", class: "ocui-AppMenu-avatar")
                   = application_name(:legislando)
