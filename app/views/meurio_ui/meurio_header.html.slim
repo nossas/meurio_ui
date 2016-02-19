@@ -48,12 +48,6 @@
           = link_to("http://paneladepressao.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
             = image_tag('mrui_pdp.png')
             span= application_name(:pdp)
-          = link_to("http://multitude.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
-            = image_tag('mrui_multitude.png')
-            span= application_name(:multitude)
-          = link_to("http://imagine.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
-            = image_tag('mrui_imagine.png')
-            span= application_name(:imagine)
           = link_to("http://apoie.meurio.org.br/", class: :meurio_app) do
             = image_tag('mrui_apoie.png')
             span= application_name(:apoie)
@@ -63,9 +57,6 @@
           = link_to("http://deguarda.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
             = image_tag("mrui_deguarda.png")
             span= application_name(:deguarda)
-          = link_to("http://compartilhaco.#{ENV["MEURIO_DOMAIN"]}/", class: :meurio_app) do
-            = image_tag("mrui_compartilhaco.png")
-            span= application_name(:compartilhaco)
       .alert
         - unless [:minhascidades, :pdp, :multitude, :compartilhaco, :legislando].include?(@app)
           a.icon-warning href="#" data-dropdown="support-alert"
